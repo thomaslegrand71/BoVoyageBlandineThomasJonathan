@@ -26,17 +26,9 @@
             background-color: #f2f2f2;
             padding: 25px;
         }
-                .carousel-inner img {
-            width: 40%; /* Set width to 100% */
-            margin: auto;
-            height: 40%;
-        }
 
-        @media (max-width: 100px) {
-            .carousel-caption {
-                display: none;
-            }
     </style>
+    @RenderSection("SectionStyle", false)
 </head>
 
 
@@ -66,9 +58,9 @@
                             Naviguer
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Afficher</a> <br>
+                            <a class="dropdown-item" href="@Url.Action("Index", "Voyages")">Afficher</a> <br>
                             <a class="dropdown-item" href="#">Rechercher</a> <br>
-                            <a class="dropdown-item" href="#">Créer</a>
+                            <a class="dropdown-item" href="@Url.Action("Create", "Voyages")">Créer</a>
                         </div>
                     </li>
                     <li><a href="#">A propos</a></li>
