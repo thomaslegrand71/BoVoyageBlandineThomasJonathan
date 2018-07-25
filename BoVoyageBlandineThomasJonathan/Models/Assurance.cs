@@ -5,8 +5,8 @@ using System.Web;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {
-    public class Participants : Personnes
+    public class Assurance : BaseModel
     {
-        public decimal Reduction { get; set; }
+        public bool Annulation { get; set;}
     }
 }

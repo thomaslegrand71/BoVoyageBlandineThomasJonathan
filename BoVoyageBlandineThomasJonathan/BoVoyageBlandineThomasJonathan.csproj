@@ -117,18 +117,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Agences.cs" />
-    <Compile Include="Models\Assurances.cs" />
+    <Compile Include="Models\Agence.cs" />
+    <Compile Include="Models\Assurance.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Civilite.cs" />
-    <Compile Include="Models\Clients.cs" />
-    <Compile Include="Models\ConseillersClientele.cs" />
-    <Compile Include="Models\Destinations.cs" />
-    <Compile Include="Models\DossiersReservation.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\ConseillerClientele.cs" />
+    <Compile Include="Models\Destination.cs" />
+    <Compile Include="Models\DossierReservation.cs" />
     <Compile Include="Models\EtatDossierReservation.cs" />
-    <Compile Include="Models\Participants.cs" />
-    <Compile Include="Models\Personnes.cs" />
-    <Compile Include="Models\Voyages.cs" />
+    <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\Personne.cs" />
+    <Compile Include="Models\Visiteur.cs" />
+    <Compile Include="Models\VoyageFile.cs" />
+    <Compile Include="Models\Voyage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
