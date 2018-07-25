@@ -9,20 +9,20 @@ using System.Web.Mvc;
 using BoVoyageBlandineThomasJonathan.Data;
 using BoVoyageBlandineThomasJonathan.Models;
 
-namespace BoVoyageBlandineThomasJonathan.Controllers
+namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
 {
     public class ConseillerClientelesController : Controller
     {
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
-        // GET: ConseillerClienteles
+        // GET: BackOfficeConseiller/ConseillerClienteles
         public ActionResult Index()
         {
             var conseillersClientele = db.ConseillersClientele.Include(c => c.Civilite);
             return View(conseillersClientele.ToList());
         }
 
-        // GET: ConseillerClienteles/Details/5
+        // GET: BackOfficeConseiller/ConseillerClienteles/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,14 +37,14 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(conseillerClientele);
         }
 
-        // GET: ConseillerClienteles/Create
+        // GET: BackOfficeConseiller/ConseillerClienteles/Create
         public ActionResult Create()
         {
             ViewBag.CivilityID = new SelectList(db.Civilites, "Id", "Label");
             return View();
         }
 
-        // POST: ConseillerClienteles/Create
+        // POST: BackOfficeConseiller/ConseillerClienteles/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -62,7 +62,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(conseillerClientele);
         }
 
-        // GET: ConseillerClienteles/Edit/5
+        // GET: BackOfficeConseiller/ConseillerClienteles/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,7 +78,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(conseillerClientele);
         }
 
-        // POST: ConseillerClienteles/Edit/5
+        // POST: BackOfficeConseiller/ConseillerClienteles/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -95,7 +95,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(conseillerClientele);
         }
 
-        // GET: ConseillerClienteles/Delete/5
+        // GET: BackOfficeConseiller/ConseillerClienteles/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -110,7 +110,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(conseillerClientele);
         }
 
-        // POST: ConseillerClienteles/Delete/5
+        // POST: BackOfficeConseiller/ConseillerClienteles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -13,8 +13,6 @@ namespace BoVoyageBlandineThomasJonathan.Data
         {
         }
 
-        
-
         public DbSet<Agence> Agences { get; set; }
 
         public DbSet<Civilite> Civilites { get; set; }
