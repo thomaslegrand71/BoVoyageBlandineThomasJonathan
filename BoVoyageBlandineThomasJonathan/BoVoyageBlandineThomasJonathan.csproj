@@ -127,7 +127,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -155,6 +157,10 @@
     <Compile Include="Migrations\201807251408123_add.Designer.cs">
       <DependentUpon>201807251408123_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807251427499_modif.cs" />
+    <Compile Include="Migrations\201807251427499_modif.Designer.cs">
+      <DependentUpon>201807251427499_modif.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agence.cs" />
     <Compile Include="Models\Assurance.cs" />
@@ -173,7 +179,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -234,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807251408123_add.resx">
       <DependentUpon>201807251408123_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251427499_modif.resx">
+      <DependentUpon>201807251427499_modif.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

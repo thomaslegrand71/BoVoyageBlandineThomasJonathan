@@ -31,11 +31,7 @@
             margin: auto;
             height: 40%;
         }
-
-        @media (max-width: 100px) {
-            .carousel-caption {
-                display: none;
-            }
+      
     </style>
 </head>
 
@@ -63,21 +59,64 @@
                     <li class="active"><a href="~/">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Naviguer
+                            Voyages
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Afficher</a> <br>
-                            <a class="dropdown-item" href="#">Rechercher</a> <br>
-                            <a class="dropdown-item" href="#">Créer</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "Voyages")">Afficher</a> <br>
+                            @*<a class="dropdown-item" href="#">Rechercher</a> <br>*@
+                            <a class="dropdown-item" href="@Url.Action("Create", "Voyages")">Créer</a><br />
+                            <a class="dropdown-item" href="@Url.Action("Delete", "Voyages")">Supprimer</a>
+
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Client
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Index", "Clients")">Afficher</a> <br>
+                            @*<a class="dropdown-item" href="#">Rechercher</a> <br>*@
+                            <a class="dropdown-item" href="@Url.Action("Create", "Clients")">Créer</a><br />
+                            <a class="dropdown-item" href="@Url.Action("Delete", "Clients")">Supprimer</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Destination
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Index", "Destinations")">Afficher</a> <br>
+                            @*<a class="dropdown-item" href="#">Rechercher</a> <br>*@
+                            <a class="dropdown-item" href="@Url.Action("Create", "Destinations")">Créer</a><br />
+                            <a class="dropdown-item" href="@Url.Action("Delete", "Destinations")">Supprimer</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Réservation
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Index", "DossierReservation")">Afficher</a> <br>
+                            @*<a class="dropdown-item" href="#">Rechercher</a> <br>*@
+                            <a class="dropdown-item" href="@Url.Action("Create", "DossierReservation")">Créer</a><br />
+                            <a class="dropdown-item" href="@Url.Action("Delete", "DossierReservation")">Supprimer</a>
+
+                        </div>
+                    </li>
+
+                    <li><a href="#">A propos</a></li>
+
                     <li><a href="#">A propos</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-log-in">  Se connecter</span>
+                            <span class="glyphicon glyphicon-log-in">Se connecter</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Client</a> <br>
