@@ -5,10 +5,8 @@ using System.Web;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {
-    public class QuestionnaireSatisfaction : BaseModel
+    public class Civilite : BaseModel
     {
-        public int NoteSatisfaction { get; set; }
-        
-        
+        public string Label { get; set; }
     }
 }

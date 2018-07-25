@@ -9,5 +9,7 @@ namespace BoVoyageBlandineThomasJonathan.Models
     {
         public bool Annulation { get; set;}
 
+
+
     }
 }

@@ -11,9 +11,6 @@ namespace BoVoyageBlandineThomasJonathan.Models
 
         public int PrixTotal { get; set; }
 
-        public DateTime DateAller { get; set; }
-
-        public DateTime DateRetour { get; set; }
 
         public int NombreDeVoyageurs { get; set; }
 

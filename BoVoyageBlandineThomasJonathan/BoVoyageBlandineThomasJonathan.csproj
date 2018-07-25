@@ -114,6 +114,7 @@
     <Compile Include="Models\Agences.cs" />
     <Compile Include="Models\Assurances.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Civilite.cs" />
     <Compile Include="Models\Clients.cs" />
     <Compile Include="Models\ConseillersClientele.cs" />
     <Compile Include="Models\Destinations.cs" />
@@ -121,7 +122,7 @@
     <Compile Include="Models\EtatDossierReservation.cs" />
     <Compile Include="Models\Participants.cs" />
     <Compile Include="Models\Personnes.cs" />
-    <Compile Include="Models\QuestionnaireSatisfaction.cs" />
+    <Compile Include="Models\Voyages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
