@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Roomy.Utils.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,8 +16,8 @@ namespace BoVoyageBlandineThomasJonathan.Models
                           @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
                           @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$",
            ErrorMessage = "L'adresse mail n'est pas au bon format")]
-        //[ExistingMailUser(ErrorMessage = "Le mail existe déjà.")]
-        public string Email { get; set; }
+        [ExistingMailClient(ErrorMessage = "Un compte existe déjà pour cette {0}.")]
+        public string Mail { get; set; }
 
         [Display(Name = "Mot de passe")]
         [Required(ErrorMessage = "Le champ {0} est obligatoire")]
