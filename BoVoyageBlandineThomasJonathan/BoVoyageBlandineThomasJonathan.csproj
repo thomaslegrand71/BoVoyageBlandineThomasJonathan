@@ -116,13 +116,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Areas\BackOfficeConseiller\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Create.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Delete.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Details.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Edit.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Index.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBO.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -139,8 +132,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
+    <Compile Include="Controllers\ConseillerClientelesController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\ParticipantsController.cs" />
     <Compile Include="Controllers\VisiteursController.cs" />
@@ -157,6 +150,10 @@
     <Compile Include="Migrations\201807251122555_MajDbContext.cs" />
     <Compile Include="Migrations\201807251122555_MajDbContext.Designer.cs">
       <DependentUpon>201807251122555_MajDbContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807251408123_add.cs" />
+    <Compile Include="Migrations\201807251408123_add.Designer.cs">
+      <DependentUpon>201807251408123_add.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agence.cs" />
@@ -216,6 +213,7 @@
     <Content Include="Views\VoyageFiles\Details.cshtml" />
     <Content Include="Views\VoyageFiles\Edit.cshtml" />
     <Content Include="Views\VoyageFiles\Index.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -225,7 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\BackOfficeClient\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807251122555_MajDbContext.resx">
       <DependentUpon>201807251122555_MajDbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251408123_add.resx">
+      <DependentUpon>201807251408123_add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
