@@ -143,6 +143,7 @@
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ParticipantsController.cs" />
     <Compile Include="Controllers\VisiteursController.cs" />
     <Compile Include="Controllers\VoyageFilesController.cs" />
@@ -221,7 +222,7 @@
     <Content Include="Views\VoyageFiles\Details.cshtml" />
     <Content Include="Views\VoyageFiles\Edit.cshtml" />
     <Content Include="Views\VoyageFiles\Index.cshtml" />
-    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
