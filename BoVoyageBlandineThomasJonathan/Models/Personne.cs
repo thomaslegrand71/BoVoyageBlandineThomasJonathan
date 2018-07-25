@@ -7,21 +7,23 @@ using System.Web;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {
-    public abstract class Personnes : BaseModel
+    public abstract class Personne : BaseModel
     {
         //public string Civilite { get; set; }
 
-        [Required(ErrorMessage ="Le champ {0} est obligatoire")]
         [Display(Name ="Nom")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Le champ {0} doit contenir entre {2} et {1} caractères")]
         public string Nom { get; set; }
 
-        [Required(ErrorMessage = "Le champ {0} est obligatoire")]
         [Display(Name = "Prenom")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Le champ {0} doit contenir entre {2} et {1} caractères")]
         public string Prenom { get; set; }
 
+        [StringLength(200)]
         [Display(Name = "Adresse")]
         public string Adresse { get; set; }
 
+        [StringLength(10)]
         [Display(Name = "Telephone")]
         public string Telephone { get; set; }
 
