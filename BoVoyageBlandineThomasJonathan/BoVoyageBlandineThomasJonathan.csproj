@@ -116,14 +116,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\BackOfficeConseiller\Views\web.config" />
+    <Content Include="Areas\BackOfficeConseiller\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Create.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Delete.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Details.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Edit.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Index.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBO.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\Dashboard\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -140,6 +140,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\BackOfficeConseillerAreaRegistration.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
@@ -233,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\BackOfficeConseiller\Models\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
