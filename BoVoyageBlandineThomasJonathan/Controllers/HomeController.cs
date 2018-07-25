@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoVoyageBlandineThomasJonathan.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +14,18 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         {
             return View();
         }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+       
+
     }
 }
