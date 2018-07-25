@@ -16,7 +16,7 @@ namespace BoVoyageBlandineThomasJonathan.Models
 
         public int NombreDeVoyageurs { get; set; }
 
-        public bool SolvaviliteCompteBancaire { get; set; }
+        public bool SolvabiliteCompteBancaire { get; set; }
 
         public int IdVoyage { get; set; }
         [ForeignKey("IdVoyage")]
