@@ -124,6 +124,7 @@
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Details.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Edit.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Index.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Authentication\Login.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -141,7 +142,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\BackOfficeConseiller\BackOfficeConseillerAreaRegistration.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\AuthenticationController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Models\AuthenticationViewModels.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -181,6 +184,9 @@
     <Compile Include="Models\VoyageFile.cs" />
     <Compile Include="Models\Voyage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+    <Compile Include="Utils\Validators\ExistingMailClient.cs" />
+    <Compile Include="Utils\Validators\ExistingMailConseillerClientele.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -234,7 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\BackOfficeConseiller\Models\" />
+    <Folder Include="Areas\BackOfficeClient\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
