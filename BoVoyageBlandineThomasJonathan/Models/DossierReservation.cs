@@ -9,14 +9,23 @@ namespace BoVoyageBlandineThomasJonathan.Models
 {
     public class DossierReservation : BaseModel
     {
-        [StringLength(16)]
+        [Required(ErrorMessage = "Le champ {0} est obligatoire.")]
+        [StringLength(16, ErrorMessage = "{0} invalide.")]
+        [Display(Name = "Numéro de carte bancaire")]
         public string NumeroCarteBancaire { get; set; }
 
+        [Required(ErrorMessage = "Le champ {0} est obligatoire.")]
+        [Display(Name = "Prix total")]
+        [DataType(DataType.Currency)]
         public int PrixTotal { get; set; }
 
+        [Required(ErrorMessage = "Le champ {0} est obligatoire.")]
+        [Display(Name = "Nombre de participants")]
+        [Range(0, 9)]
         public int NombreDeVoyageurs { get; set; }
 
-        public bool SolvabiliteCompteBancaire { get; set; }
+        [Display(Name = "Solvabilité du compte")]
+        public bool SolvaviliteCompteBancaire { get; set; }
 
         public int IdVoyage { get; set; }
         [ForeignKey("IdVoyage")]

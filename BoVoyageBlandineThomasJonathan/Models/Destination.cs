@@ -12,12 +12,14 @@ namespace BoVoyageBlandineThomasJonathan.Models
         public string Continent { get; set;  }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "La valeur {0} est obligatoire.")]
         public string Pays { get; set; }
 
         [StringLength(50)]
         public string Region { get; set; }
 
         [StringLength(200)]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
     }
 }

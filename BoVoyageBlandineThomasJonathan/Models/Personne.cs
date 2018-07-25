@@ -11,6 +11,7 @@ namespace BoVoyageBlandineThomasJonathan.Models
     {
         //public string Civilite { get; set; }
 
+        [Required(ErrorMessage = "Le champ {0} est obligatoire")]
         [Display(Name ="Nom")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Le champ {0} doit contenir entre {2} et {1} caractères")]
         public string Nom { get; set; }
@@ -27,12 +28,17 @@ namespace BoVoyageBlandineThomasJonathan.Models
         [Display(Name = "Telephone")]
         public string Telephone { get; set; }
 
-        [Display(Name = "DateDeNaissance")]
+        [Display(Name = "Date de Naissance")]
+        [Required(ErrorMessage = "Le champ {0} est obligatoire")]
+        [DataType(DataType.Date)]
         public DateTime DateDeNaissance { get; set; }
 
         public int Age { get; set; }
 
+        [Required(ErrorMessage = "Civilité obligatoire")]
+        [Display(Name = "Civilité")]
         public int CivilityID { get; set; }
+
         [ForeignKey("CivilityID")]
         public Civilite Civilite { get; set; }
     }
