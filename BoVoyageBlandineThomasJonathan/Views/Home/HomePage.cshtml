@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="India.png" data-slide-to="0" class="active"></li>
+            <li data-target="Ireland.png" data-slide-to="1"></li>
+            <li data-target="Australia.png" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img href="#" src="India.png" alt="India">
+                <div class="carousel-caption">
+                    <h3 style="color: azure ; font-family: solid ">OFFRES SPECIALES</h3>
+                    <p style="color: azure">Découvrez les merveilles de la région de Kerala</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Ireland.png" alt="Irlande">
+                <div class="carousel-caption">
+                    <h3 style="color: azure">OFFRES SPECIALES</h3>
+                    <p style="color: azure">Allez vous promener dans la campagne du Carlow</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Australia.png" alt="Australie">
+                <div class="carousel-caption">
+                    <h3 style="color: azure">OFFRES SPECIALES</h3>
+                    <p style="color: azure">Laissez-vous tenter par les plages du Queensland</p>
+                </div>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Precedent</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
+        </a>
+    </div>
+
+    <div class="container text-center">
+        <h3>Nos meilleures offres</h3><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>Les prochains voyages</h4>
+                <!--@Html.Action("TopFiveDate", "Shared")-->
+            </div>
+            <div class="col-sm-4">
+                <h4>Les meilleurs budgets</h4>
+                <!--@Html.Action("TopFivePrice", "Shared")-->
+            </div>
+            <div class="col-sm-4">
+                <h4>Les destinations populaires</h4>
+                <!--@Html.Action("TopFiveCountry", "Shared")-->
+            </div>
+        </div>
+    </div><br>
+
+</body>
+
