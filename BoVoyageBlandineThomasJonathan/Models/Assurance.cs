@@ -5,8 +5,8 @@ using System.Web;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {
-    public class ConseillersClientele :Personnes //héritage de personnes directement (adresse? )
+    public class Assurance : BaseModel
     {
-
+        public bool Annulation { get; set;}
     }
 }

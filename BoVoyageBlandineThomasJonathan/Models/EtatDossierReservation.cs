@@ -5,8 +5,11 @@ using System.Web;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {
-    public class EtatDossierReservation
+    public enum EtatDossierReservation : byte
     {
-        //Enum ?
+        enAttente = 0,
+        enCours = 1,
+        refusee = 2,
+        acceptee = 3
     }
 }

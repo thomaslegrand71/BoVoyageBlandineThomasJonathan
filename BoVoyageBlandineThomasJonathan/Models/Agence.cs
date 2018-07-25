@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {
-    public class Assurances : BaseModel
+    public class Agence : BaseModel
     {
-        public bool Annulation { get; set;}
-
+        [StringLength(50)]
+        public string Nom { get; set; }
     }
 }

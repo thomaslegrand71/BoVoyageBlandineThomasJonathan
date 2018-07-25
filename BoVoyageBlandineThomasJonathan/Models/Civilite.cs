@@ -5,8 +5,8 @@ using System.Web;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {
-    public class Participants : Personnes
+    public class Civilite : BaseModel
     {
-        public decimal Reduction { get; set; }
+        public string Label { get; set; }
     }
 }
