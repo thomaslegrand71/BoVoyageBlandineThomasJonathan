@@ -21,7 +21,7 @@ namespace BoVoyageBlandineThomasJonathan.Models
         public Agence Agence { get; set; }
 
         public int IdDestination { get; set; }
-        [ForeignKey("DestinationId")]
+        [ForeignKey("IdDestination")]
         public Destination Destination { get; set; }      
 
         public ICollection<VoyageFile> Files { get; set; }
