@@ -1,10 +1,10 @@
-﻿using Roomy.Utils.Validators;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using BoVoyageBlandineThomasJonathan.Utils.Validators;
 
 namespace BoVoyageBlandineThomasJonathan.Models
 {

@@ -9,114 +9,118 @@ using System.Web.Mvc;
 using BoVoyageBlandineThomasJonathan.Data;
 using BoVoyageBlandineThomasJonathan.Models;
 
-namespace BoVoyageBlandineThomasJonathan.Controllers
+namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
 {
-    public class ClientsController : Controller
+    public class BackOfficeVoyagesController : Controller
     {
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
-        // GET: Clients
+        // GET: BackOfficeConseiller/BackOfficeVoyages
         public ActionResult Index()
         {
-            var clients = db.Clients.Include(c => c.Civilite);
-            return View(clients.ToList());
+            var voyages = db.Voyages.Include(v => v.Agence).Include(v => v.Destination);
+            return View(voyages.ToList());
         }
 
-        // GET: Clients/Details/5
+        // GET: BackOfficeConseiller/BackOfficeVoyages/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Clients.Find(id);
-            if (client == null)
+            Voyage voyage = db.Voyages.Find(id);
+            if (voyage == null)
             {
                 return HttpNotFound();
             }
-            return View(client);
+            return View(voyage);
         }
 
-        // GET: Clients/Create
+        // GET: BackOfficeConseiller/BackOfficeVoyages/Create
         public ActionResult Create()
         {
-            ViewBag.CivilityID = new SelectList(db.Civilites, "Id", "Label");
+            ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom");
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent");
             return View();
         }
 
-        // POST: Clients/Create
+        // POST: BackOfficeConseiller/BackOfficeVoyages/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Mail,Password,ConfirmedPassword,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] Client client)
+        public ActionResult Create([Bind(Include = "Id,DateAller,DateRetour,PlacesDisponibles,TarifToutCompris,IdAgence,IdDestination")] Voyage voyage)
         {
             if (ModelState.IsValid)
             {
-                db.Clients.Add(client);
+                db.Voyages.Add(voyage);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CivilityID = new SelectList(db.Civilites, "Id", "Label", client.CivilityID);
-            return View(client);
+            ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom", voyage.IdAgence);
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent", voyage.IdDestination);
+            return View(voyage);
         }
 
-        // GET: Clients/Edit/5
+        // GET: BackOfficeConseiller/BackOfficeVoyages/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Clients.Find(id);
-            if (client == null)
+            Voyage voyage = db.Voyages.Find(id);
+            if (voyage == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CivilityID = new SelectList(db.Civilites, "Id", "Label", client.CivilityID);
-            return View(client);
+            ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom", voyage.IdAgence);
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent", voyage.IdDestination);
+            return View(voyage);
         }
 
-        // POST: Clients/Edit/5
+        // POST: BackOfficeConseiller/BackOfficeVoyages/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Mail,Password,ConfirmedPassword,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] Client client)
+        public ActionResult Edit([Bind(Include = "Id,DateAller,DateRetour,PlacesDisponibles,TarifToutCompris,IdAgence,IdDestination")] Voyage voyage)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(client).State = EntityState.Modified;
+                db.Entry(voyage).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CivilityID = new SelectList(db.Civilites, "Id", "Label", client.CivilityID);
-            return View(client);
+            ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom", voyage.IdAgence);
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent", voyage.IdDestination);
+            return View(voyage);
         }
 
-        // GET: Clients/Delete/5
+        // GET: BackOfficeConseiller/BackOfficeVoyages/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Clients.Find(id);
-            if (client == null)
+            Voyage voyage = db.Voyages.Find(id);
+            if (voyage == null)
             {
                 return HttpNotFound();
             }
-            return View(client);
+            return View(voyage);
         }
 
-        // POST: Clients/Delete/5
+        // POST: BackOfficeConseiller/BackOfficeVoyages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Client client = db.Clients.Find(id);
-            db.Clients.Remove(client);
+            Voyage voyage = db.Voyages.Find(id);
+            db.Voyages.Remove(voyage);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
