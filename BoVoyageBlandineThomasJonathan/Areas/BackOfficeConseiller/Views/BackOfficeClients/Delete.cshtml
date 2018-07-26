@@ -1,12 +1,14 @@
-﻿@model BoVoyageBlandineThomasJonathan.Models.ConseillerClientele
+﻿@model BoVoyageBlandineThomasJonathan.Models.Client
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Delete";
 }
 
+<h2>Supprimer un client</h2>
 
+<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Conseiller {0}</h4>
+    <h4>Client</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -82,8 +84,13 @@
         </dd>
 
     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Retour à la liste", "Index")
+        </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Retour à la liste", "Index")
-</p>
