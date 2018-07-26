@@ -118,7 +118,7 @@
     <Content Include="Global.asax" />
     <Content Include="Areas\BackOfficeConseiller\Views\web.config" />
     <Content Include="Areas\BackOfficeConseiller\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBO.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBOConseiller.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Create.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Delete.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Details.cshtml" />
@@ -137,6 +137,11 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Create.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Delete.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Details.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Edit.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -160,6 +165,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\BackOfficeConseiller\BackOfficeConseillerAreaRegistration.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\AuthenticationController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\BackOfficeClientsController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Models\AuthenticationViewModels.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
