@@ -1,23 +1,20 @@
 ﻿@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Participant>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Participants";
 }
 
-<h2>Index</h2>
+<h2>Participants</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ajouter participant", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Civilite.Label)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reduction)
-        </th>
-        <th>
+                <th>
             @Html.DisplayNameFor(model => model.Nom)
         </th>
         <th>
@@ -35,6 +32,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Age)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reduction)
+        </th>
         <th></th>
     </tr>
 
@@ -43,10 +43,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Civilite.Label)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Reduction)
-        </td>
-        <td>
+          <td>
             @Html.DisplayFor(modelItem => item.Nom)
         </td>
         <td>
@@ -65,9 +62,12 @@
             @Html.DisplayFor(modelItem => item.Age)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.DisplayFor(modelItem => item.Reduction)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Supprimer", "Delete", new { id = item.Id })
         </td>
     </tr>
 }
