@@ -1,9 +1,4 @@
-﻿
-@{
-    Layout = null;
-}
-
-<html lang="fr">
+﻿<html lang="fr">
 <head>
     <title>BoVoyage | @ViewBag.Title</title>
     <meta charset="utf-8">
@@ -20,6 +15,7 @@
         .navbar {
             margin-bottom: 0;
             border-radius: 0;
+
         }
 
         footer {
@@ -36,12 +32,12 @@
     <div class="header" style="text-align: center">
         <div class="container-fluid">
             <h1> BoVoyage </h1>
-            <h4 style="font-style: italic"> Laissez-vous emmener </h4>
+            <h4 style="font-style: italic"> Bienvenue dans votre Back Office </h4>
         </div>
     </div>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg" style="background-color:lightskyblue">
         <a class="navbar-brand" href="~/">BoVoyage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,25 +46,48 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="~/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="">Accueil BO <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Naviguer
+                        Conseillers clientèle
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="@Url.Action("Index", "Voyages")">Afficher</a>
-                        <a class="dropdown-item" href="#">Rechercher</a>
-                        <a class="dropdown-item" href="@Url.Action("Create", "Voyages")">Créer</a>
-
+                        <a class="dropdown-item" href="@Url.Action("Create", "ConseillerClienteles")">Créer un conseiller</a>
+                        <a class="dropdown-item" href="@Url.Action("Index", "ConseillerClienteles")">Liste des conseillers</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("About","Home")">A propos</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Voyages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="">Créer un voyage</a>
+                        <a class="dropdown-item" href="">Liste des voyages</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.RouteUrl("Contact")">Contact</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Destinations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="">Créer une destination</a>
+                        <a class="dropdown-item" href="">Liste des destinations</a>
+                    </div>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dossiers de réservation
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="">Créer un dossier</a>
+                        <a class="dropdown-item" href="">Liste des dossiers</a>
+                    </div>
+                </li>
+
             </ul>
 
             <form class="nav-item dropdown my-2 my-lg-0">
@@ -82,7 +101,7 @@
             </form>
         </div>
     </nav>
-    
+
     @RenderBody()
 
     <footer class="container-fluid text-center">
@@ -95,5 +114,3 @@
 
 </body>
 </html>
-
-
