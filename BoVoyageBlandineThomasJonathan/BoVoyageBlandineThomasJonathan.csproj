@@ -154,6 +154,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\BackOfficeClient\Views\DashboardClient\IndexClient.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -177,6 +178,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\BackOfficeClient\BackOfficeClientAreaRegistration.cs" />
     <Compile Include="Areas\BackOfficeClient\Controllers\ClientsBOClientController.cs" />
+    <Compile Include="Areas\BackOfficeClient\Controllers\DashboardClientController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\BackOfficeConseillerAreaRegistration.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\AuthenticationController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
