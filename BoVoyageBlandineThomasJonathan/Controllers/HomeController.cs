@@ -19,7 +19,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
 
             var model = db.Voyages.Include("Destination").Where(x => x.DateAller > DateTime.Now).OrderBy(x => x.DateAller);
 
-           
+        
             return View(model);
         }
 
