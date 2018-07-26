@@ -231,9 +231,7 @@
     <Content Include="Views\Participants\Edit.cshtml" />
     <Content Include="Views\Participants\Index.cshtml" />
     <Content Include="Views\Visiteurs\Create.cshtml" />
-    <Content Include="Views\Visiteurs\Delete.cshtml" />
     <Content Include="Views\Visiteurs\Details.cshtml" />
-    <Content Include="Views\Visiteurs\Edit.cshtml" />
     <Content Include="Views\Visiteurs\Index.cshtml" />
     <Content Include="Views\Voyages\Create.cshtml" />
     <Content Include="Views\Voyages\Delete.cshtml" />
