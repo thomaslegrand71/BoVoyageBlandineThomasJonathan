@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Security.Cryptography;
+using BoVoyageBlandineThomasJonathan.Utils.Validators;
 
-namespace Roomy.Utils
+namespace BoVoyageBlandineThomasJonathan.Utils.Validators
 {
     public static class Extensions
     {

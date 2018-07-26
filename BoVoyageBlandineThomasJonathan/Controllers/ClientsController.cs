@@ -49,7 +49,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Email,Password,ConfirmedPassword,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] Client client)
+        public ActionResult Create([Bind(Include = "Id,Mail,Password,ConfirmedPassword,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] Client client)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Email,Password,ConfirmedPassword,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] Client client)
+        public ActionResult Edit([Bind(Include = "Id,Mail,Password,ConfirmedPassword,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] Client client)
         {
             if (ModelState.IsValid)
             {
