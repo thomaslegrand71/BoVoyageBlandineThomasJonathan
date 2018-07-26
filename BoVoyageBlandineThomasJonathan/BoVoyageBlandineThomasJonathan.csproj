@@ -142,6 +142,15 @@
     <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Details.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Edit.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeClients\Index.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeVisiteurs\Details.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeVisiteurs\Index.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeVoyages\Create.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeVoyages\Delete.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeVoyages\Details.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeVoyages\Edit.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BackOfficeVoyages\Index.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Search.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -166,7 +175,10 @@
     <Compile Include="Areas\BackOfficeConseiller\BackOfficeConseillerAreaRegistration.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\AuthenticationController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BackOfficeClientsController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\BackOfficeVisiteursController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\BackOfficeVoyagesController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\DashboardController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Models\AuthenticationViewModels.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
