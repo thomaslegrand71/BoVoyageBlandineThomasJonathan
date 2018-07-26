@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using BoVoyageBlandineThomasJonathan.Data;
 
 
-namespace Roomy.Utils.Validators
+namespace BoVoyageBlandineThomasJonathan.Utils.Validators
 {
     public class ExistingMailClient : ValidationAttribute
     {

@@ -1,16 +1,10 @@
-﻿
-@{
-    Layout = null;
-}
-
-<html lang="fr">
+﻿<html lang="fr">
 <head>
-    <title>BoVoyage | @ViewBag.Title</title>
+    <title>BoVoyage | Mon Compte Client</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/site.css" rel="stylesheet" />
     <style>
         .header {
@@ -21,6 +15,7 @@
         .navbar {
             margin-bottom: 0;
             border-radius: 0;
+
         }
 
         footer {
@@ -37,12 +32,12 @@
     <div class="header" style="text-align: center">
         <div class="container-fluid">
             <h1> BoVoyage </h1>
-            <h4 style="font-style: italic"><i> Laissez-vous emmener</i> </h4>
+            <h4 style="font-style: italic"> Bienvenue dans votre compte client BoVoyage </h4>
         </div>
     </div>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg" style="background-color: sandybrown">
         <a class="navbar-brand" href="~/">BoVoyage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,42 +46,38 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="~/"> <i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="">BoCompte<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-globe"></i> Naviguer
+                        Voyages
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="@Url.Action("Index", "Voyages")">Afficher</a>
-                        <a class="dropdown-item" href="#">Rechercher</a>
-
+                        <a class="dropdown-item" href="#">Reserver un voyage</a>
+                        <a class="dropdown-item" href="#">Participants</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mes reservations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="">Mes reservations en cours</a>
+                        <a class="dropdown-item" href="">Historique des reservations</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.RouteUrl("Contact")"> <i class="fa fa-file"></i>  Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Create","Clients")"><i class="fa fa-user"></i>  Créer un compte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("About","Home")"> <i class="fa fa-info"></i>  A propos</a>
+                    <a class="nav-link" href="#"><i class="fa ">Mon Compte </i></a>
                 </li>
             </ul>
 
-                           
-                <form class="nav-item dropdown my-2 my-lg-0">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-sign-in"></i> Se connecter 
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Client</a>
-                        <a class="dropdown-item" href="#">Commercial</a>
-                    </div>
-                </form>
+            <span class="navbar-text">
+                Bonjour @Model.client.Firstname @Model.client.Lastname <a href="@Url.Action("Logout", "Authentication")" class="btn btn-warning btn-sm"><i class="fa fa-eject">Se deconnecter</i></a>
+            </span>
+
         </div>
     </nav>
-    
+
     @RenderBody()
 
     <footer class="container-fluid text-center">
@@ -99,5 +90,3 @@
 
 </body>
 </html>
-
-

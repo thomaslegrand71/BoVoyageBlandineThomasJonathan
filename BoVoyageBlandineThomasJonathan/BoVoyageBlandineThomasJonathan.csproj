@@ -68,6 +68,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -114,7 +117,10 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Areas\BackOfficeConseiller\Views\web.config" />
     <Content Include="Areas\BackOfficeConseiller\Views\_ViewStart.cshtml" />
@@ -137,6 +143,17 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Areas\BackOfficeClient\Views\web.config" />
+    <Content Include="Areas\BackOfficeClient\Views\Shared\_LayoutBOClient.cshtml" />
+    <Content Include="Areas\BackOfficeClient\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\BackOfficeClient\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\BackOfficeClient\Views\ClientsBOClient\Details.cshtml" />
+    <Content Include="Areas\BackOfficeClient\Views\ClientsBOClient\Edit.cshtml" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -158,6 +175,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\BackOfficeClient\BackOfficeClientAreaRegistration.cs" />
+    <Compile Include="Areas\BackOfficeClient\Controllers\ClientsBOClientController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\BackOfficeConseillerAreaRegistration.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\AuthenticationController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
@@ -254,7 +273,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\BackOfficeClient\" />
+    <Folder Include="Areas\BackOfficeClient\Models\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
