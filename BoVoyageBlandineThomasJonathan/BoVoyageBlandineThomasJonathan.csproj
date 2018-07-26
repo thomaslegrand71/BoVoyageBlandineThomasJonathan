@@ -251,15 +251,7 @@
     <Content Include="Views\Clients\Details.cshtml" />
     <Content Include="Views\Clients\Edit.cshtml" />
     <Content Include="Views\Clients\Index.cshtml" />
-    <Content Include="Views\ConseillerClienteles\Create.cshtml" />
-    <Content Include="Views\ConseillerClienteles\Delete.cshtml" />
-    <Content Include="Views\ConseillerClienteles\Details.cshtml" />
-    <Content Include="Views\ConseillerClienteles\Edit.cshtml" />
-    <Content Include="Views\ConseillerClienteles\Index.cshtml" />
-    <Content Include="Views\Destinations\Create.cshtml" />
-    <Content Include="Views\Destinations\Delete.cshtml" />
     <Content Include="Views\Destinations\Details.cshtml" />
-    <Content Include="Views\Destinations\Edit.cshtml" />
     <Content Include="Views\Destinations\Index.cshtml" />
     <Content Include="Views\Participants\Create.cshtml" />
     <Content Include="Views\Participants\Delete.cshtml" />
@@ -269,10 +261,7 @@
     <Content Include="Views\Visiteurs\Create.cshtml" />
     <Content Include="Views\Visiteurs\Details.cshtml" />
     <Content Include="Views\Visiteurs\Index.cshtml" />
-    <Content Include="Views\Voyages\Create.cshtml" />
-    <Content Include="Views\Voyages\Delete.cshtml" />
     <Content Include="Views\Voyages\Details.cshtml" />
-    <Content Include="Views\Voyages\Edit.cshtml" />
     <Content Include="Views\Voyages\Index.cshtml" />
     <Content Include="Views\VoyageFiles\Create.cshtml" />
     <Content Include="Views\VoyageFiles\Delete.cshtml" />
