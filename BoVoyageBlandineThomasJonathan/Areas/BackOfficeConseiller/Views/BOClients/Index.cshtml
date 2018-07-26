@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Client>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Clients";
 }
 
-<h2>Index</h2>
+<h2>Liste des clients</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Créer un nouveau client", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,41 +41,42 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Civilite.Label)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Prenom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adresse)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telephone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateDeNaissance)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Age)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Civilite.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateDeNaissance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                 @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                 @Html.ActionLink("Supprimer", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>
