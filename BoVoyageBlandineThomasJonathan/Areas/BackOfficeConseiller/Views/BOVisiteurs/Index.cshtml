@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Visiteur>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Visiteur";
 }
 
-<h2>Index</h2>
+<h2>Liste de demandes</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -47,9 +46,7 @@
             @Html.DisplayFor(modelItem => item.Demande)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Details", "Details", new { id=item.Id })
         </td>
     </tr>
 }

@@ -10,6 +10,7 @@ namespace BoVoyageBlandineThomasJonathan.Models
     {
         [Required(ErrorMessage = "Nom obligatoire")]
         [StringLength(15, ErrorMessage = "Trop long")]
+        [Display(Name = "Civilité")]
         public string Label { get; set; }
     }
 }

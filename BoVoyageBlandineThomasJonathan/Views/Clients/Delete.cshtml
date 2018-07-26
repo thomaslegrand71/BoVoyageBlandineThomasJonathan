@@ -4,9 +4,9 @@
     ViewBag.Title = "Supprimer client";
 }
 
-<h4>Supprimer un client</h4>
+<h2>Supprimer un client</h2>
 
-<h2>Voulez-vous supprimer le client @Model.Prenom @Model.Nom?</h2>
+<h4>Voulez-vous supprimer le client @Model.Prenom @Model.Nom?</h4>
 <div>
 
     <hr />
@@ -81,8 +81,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Supprimer ce client" class="btn btn-default" /> |
+            @Html.ActionLink("Retour à la liste", "Index")
         </div>
     }
 </div>
