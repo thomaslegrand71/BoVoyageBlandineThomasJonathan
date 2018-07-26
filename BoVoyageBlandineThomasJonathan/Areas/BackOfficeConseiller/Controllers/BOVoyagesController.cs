@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -10,20 +9,20 @@ using System.Web.Mvc;
 using BoVoyageBlandineThomasJonathan.Data;
 using BoVoyageBlandineThomasJonathan.Models;
 
-namespace BoVoyageBlandineThomasJonathan.Controllers
+namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
 {
-    public class VoyagesController : Controller
+    public class BOVoyagesController : Controller
     {
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
-        // GET: Voyages
+        // GET: BackOfficeConseiller/BOVoyages
         public ActionResult Index()
         {
             var voyages = db.Voyages.Include(v => v.Agence).Include(v => v.Destination);
             return View(voyages.ToList());
         }
 
-        // GET: Voyages/Details/5
+        // GET: BackOfficeConseiller/BOVoyages/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,7 +37,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(voyage);
         }
 
-        // GET: Voyages/Create
+        // GET: BackOfficeConseiller/BOVoyages/Create
         public ActionResult Create()
         {
             ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom");
@@ -46,7 +45,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View();
         }
 
-        // POST: Voyages/Create
+        // POST: BackOfficeConseiller/BOVoyages/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -65,7 +64,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(voyage);
         }
 
-        // GET: Voyages/Edit/5
+        // GET: BackOfficeConseiller/BOVoyages/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,7 +81,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(voyage);
         }
 
-        // POST: Voyages/Edit/5
+        // POST: BackOfficeConseiller/BOVoyages/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -100,7 +99,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(voyage);
         }
 
-        // GET: Voyages/Delete/5
+        // GET: BackOfficeConseiller/BOVoyages/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -115,7 +114,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             return View(voyage);
         }
 
-        // POST: Voyages/Delete/5
+        // POST: BackOfficeConseiller/BOVoyages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -125,8 +124,6 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-   
 
         protected override void Dispose(bool disposing)
         {

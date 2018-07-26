@@ -1,4 +1,11 @@
-﻿@section SectionStyle{
+﻿@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Voyage>
+
+@*@{
+        ViewBag.Title = "Voyage";
+    }*@
+
+
+@section SectionStyle{
 <style>
     .carousel-inner img {
         width: auto;
@@ -56,15 +63,55 @@
     </a>
 </div>
 
-<div class="container" style="text-align: center">
+
+<div class="container text-center">
     <h3>Nos meilleures offres</h3><br>
     <div class="row">
         <div class="col-sm-4">
             <h4>Les prochains voyages</h4>
+            <div class="row" text-center>
+
+                @foreach (var item in Model)
+                {
+                <table class="table" text-align="center">
+                    <tr>
+                        @Html.DisplayFor(modelItem => item.Destination.Pays)
+                    </tr>
+                    <tr>
+                        @Html.DisplayFor(modelItem => item.DateAller)
+                    </tr>
+                    <tr>
+                        @Html.DisplayFor(modelItem => item.TarifToutCompris)
+                    </tr>
+                </table>
+                }
+
+            </div>
+
             @*@Html.Action("TopFiveDate", "Shared")*@
         </div>
         <div class="col-sm-4">
             <h4>Les meilleurs budgets</h4>
+
+            <div class="row" text-center>
+
+                @foreach (var item in Model)
+                {
+                    <table class="table" text-align="center">
+                        <tr>
+                            @Html.DisplayFor(modelItem => item.Destination.Pays)
+                        </tr>
+                        <tr>
+                            @Html.DisplayFor(modelItem => item.DateAller)
+                        </tr>
+                        <tr>
+                            @Html.DisplayFor(modelItem => item.TarifToutCompris)
+                        </tr>
+                    </table>
+                }
+
+            </div>
+
             @*@Html.Action("TopFivePrice", "Shared")*@
         </div>
         <div class="col-sm-4">
