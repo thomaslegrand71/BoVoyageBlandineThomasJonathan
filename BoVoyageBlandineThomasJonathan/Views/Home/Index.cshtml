@@ -24,10 +24,11 @@
 
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-80" href="#" src="~/Images/India.png" alt="India">
+            <img class="d-block w-80" src="~/Images/India.png" alt="India">
             <div class="carousel-caption d-none d-md-block">
                 <h3 style="color: azure ; font-family: solid ">OFFRES SPECIALES</h3>
                 <p style="color: azure">Découvrez les merveilles de la région de Kerala</p>
+                <button class="btn btn-info" href="@Url.Action("Voyages", "Details", "13")" type="button">En savoir plus</button>
             </div>
         </div>
 
@@ -36,6 +37,8 @@
             <div class="carousel-caption d-none d-md-block">
                 <h3 style="color: azure">OFFRES SPECIALES</h3>
                 <p style="color: azure">Allez vous promener dans la campagne du Carlow</p>
+                <button class="btn btn-info" href="@Url.Action("Details","Voyages", "21")" type="button">En savoir plus</button>
+
             </div>
         </div>
 
@@ -44,6 +47,8 @@
             <div class="carousel-caption d-none d-md-block">
                 <h3 style="color: azure">OFFRES SPECIALES</h3>
                 <p style="color: azure">Laissez-vous tenter par les plages du Queensland</p>
+                <button class="btn btn-info" href="@Url.Action("Details","Voyages", "10")" type="button">En savoir plus</button>
+
             </div>
         </div>
     </div>
