@@ -124,7 +124,6 @@
     <Content Include="Global.asax" />
     <Content Include="Areas\BackOfficeConseiller\Views\web.config" />
     <Content Include="Areas\BackOfficeConseiller\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBO.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Create.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Delete.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Details.cshtml" />
@@ -163,6 +162,12 @@
     <Content Include="Areas\BackOfficeConseiller\Views\BOClients\Search.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Search.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Search.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBO.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Create.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Delete.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Details.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Edit.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -187,6 +192,7 @@
     <Compile Include="Areas\BackOfficeConseiller\BackOfficeConseillerAreaRegistration.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\AuthenticationController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BOClientsController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\BODestinationsController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BOVisiteursController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BOVoyagesController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
