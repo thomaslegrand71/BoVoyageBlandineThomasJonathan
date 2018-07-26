@@ -88,24 +88,8 @@
         <div class="col-sm-4">
             <h4>Les meilleurs budgets</h4>
 
-            <div class="row" text-center>
-
-                @foreach (var item in Model)
-                {
-                    <table class="table" text-align="center">
-                        <tr>
-                            @Html.DisplayFor(modelItem => item.Destination.Pays)
-                        </tr>
-                        <tr>
-                            @Html.DisplayFor(modelItem => item.DateAller)
-                        </tr>
-                        <tr>
-                            @Html.DisplayFor(modelItem => item.TarifToutCompris)
-                        </tr>
-                    </table>
-                }
-
-            </div>
+            @Html.Partial("_TopFiveBudget")
+           
 
             @*@Html.Action("TopFivePrice", "Shared")*@
         </div>
