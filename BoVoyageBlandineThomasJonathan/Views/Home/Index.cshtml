@@ -1,11 +1,18 @@
-﻿@section SectionStyle{
-<style>
-    .carousel-inner img {
-        width: 40%;
-        margin: auto;
-        height: 40%;
-    }
-</style>
+﻿@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Voyage>
+
+@*@{
+        ViewBag.Title = "Voyage";
+    }*@
+
+
+@section SectionStyle{
+    <style>
+        .carousel-inner img {
+            width: 40%;
+            margin: auto;
+            height: 40%;
+        }
+    </style>
 }
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -49,6 +56,31 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Suivant</span>
     </a>
+</div>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        @*<div class="col-md-2">*@
+    <table>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination.Pays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TarifToutCompris)
+            </td>
+        </tr>
+    </table>
+            @*<p>@item.Pays</p>*@
+            @*<p>@item.TarifToutCompris €</p>*@
+        @*</div>*@
+    }
+
 </div>
 
 <div class="container text-center">
