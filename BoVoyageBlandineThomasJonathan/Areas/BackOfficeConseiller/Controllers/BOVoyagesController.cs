@@ -29,7 +29,11 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            //var model = db.Voyages.Include("Destination").Where(x => x.IdDestination).SingleOrDefault();
+            
             Voyage voyage = db.Voyages.Find(id);
+
             if (voyage == null)
             {
                 return HttpNotFound();
@@ -41,7 +45,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
         public ActionResult Create()
         {
             ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom");
-            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent");
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Pays");
             return View();
         }
 
@@ -60,7 +64,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             }
 
             ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom", voyage.IdAgence);
-            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent", voyage.IdDestination);
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Pays", voyage.IdDestination);
             return View(voyage);
         }
 
@@ -77,7 +81,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
                 return HttpNotFound();
             }
             ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom", voyage.IdAgence);
-            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent", voyage.IdDestination);
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Pays", voyage.IdDestination);
             return View(voyage);
         }
 
@@ -95,7 +99,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.IdAgence = new SelectList(db.Agences, "Id", "Nom", voyage.IdAgence);
-            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Continent", voyage.IdDestination);
+            ViewBag.IdDestination = new SelectList(db.Destinations, "Id", "Pays", voyage.IdDestination);
             return View(voyage);
         }
 

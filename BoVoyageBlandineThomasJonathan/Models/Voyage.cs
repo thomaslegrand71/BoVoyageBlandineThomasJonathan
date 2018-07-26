@@ -29,11 +29,15 @@ namespace BoVoyageBlandineThomasJonathan.Models
         [DataType(DataType.Currency)]
         public decimal TarifToutCompris { get; set; }
 
+
         public int IdAgence { get; set; }
+        [Display(Name = "Agence de voyage")]
         [ForeignKey("IdAgence")]
         public Agence Agence { get; set; }
 
+
         public int IdDestination { get; set; }
+        [Display(Name = "Destination")]
         [ForeignKey("IdDestination")]
         public Destination Destination { get; set; }      
 
