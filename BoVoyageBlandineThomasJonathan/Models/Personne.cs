@@ -33,7 +33,14 @@ namespace BoVoyageBlandineThomasJonathan.Models
         [DataType(DataType.Date)]
         public DateTime DateDeNaissance { get; set; }
 
-        public int Age { get; set; }
+        public int Age { get
+            
+                {
+                    return DateTime.Now.Year - DateDeNaissance.Year -
+                             (DateTime.Now.Month > DateDeNaissance.Month ? 1 :
+                             DateTime.Now.Day < DateDeNaissance.Day ? 1 : 0);
+                }
+            }
 
         [Required(ErrorMessage = "Civilité obligatoire")]
         [Display(Name = "Civilité")]
