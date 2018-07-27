@@ -16,15 +16,17 @@
         .header {
             margin: 0;
             padding: 25px;
+            background-color: blanchedalmond;
         }
 
         .navbar {
             margin-bottom: 0;
             border-radius: 0;
+            background-color: gray;
         }
 
         footer {
-            background-color: #f2f2f2;
+            background-color: mediumaquamarine;
             padding: 25px;
         }
     </style>
@@ -32,12 +34,12 @@
 </head>
 
 
-<body>
+<body style="background-color: blanchedalmond; color: darkslategrey">
 
     <div class="header" style="text-align: center">
         <div class="container-fluid">
-            <h1> BoVoyage </h1>
-            <h4 style="font-style: italic"><i> Laissez-vous emmener</i> </h4>
+            <h1 style="color: chocolate"> BoVoyage </h1>
+            <h4 style="font-style: italic; color:mediumturquoise "><i> Laissez-vous emmener</i> </h4>
         </div>
     </div>
 
@@ -74,19 +76,18 @@
                 </li>
             </ul>
 
-                           
-                <form class="nav-item dropdown my-2 my-lg-0">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-sign-in"></i> Se connecter 
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Client</a>
-                        <a class="dropdown-item" href="@Url.Action("Login","Authentication", new { area = "BackOfficeConseiller" })">Conseiller</a>
-                    </div>
-                </form>
+            <form class="nav-item dropdown my-2 my-lg-0">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-sign-in"></i> Se connecter
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Client</a>
+                    <a class="dropdown-item" href="@Url.Action("Login","Authentication", new { area = "BackOfficeConseiller" })">Conseiller</a>
+                </div>
+            </form>
         </div>
     </nav>
-    
+
     @RenderBody()
 
     <footer class="container-fluid text-center">
