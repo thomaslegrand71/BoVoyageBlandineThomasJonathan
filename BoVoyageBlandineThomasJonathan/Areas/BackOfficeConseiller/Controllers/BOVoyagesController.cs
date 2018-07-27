@@ -8,10 +8,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BoVoyageBlandineThomasJonathan.Data;
+using BoVoyageBlandineThomasJonathan.Filters;
 using BoVoyageBlandineThomasJonathan.Models;
 
 namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
 {
+    [AuthenticationFilter]
+
     public class BOVoyagesController : Controller
     {
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
