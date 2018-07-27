@@ -71,7 +71,18 @@
     </div>
 }
 
-<form action="@Url.Action("AddFile", "Voyages")" method="post" enctype="multipart/form-data">
+<div class="row">
+        @foreach (var item in Model.Files)
+        {
+            <div class="col-md-3" id="div-file-@item.Id">
+                <img class="img-thumbnail" title="@item.Name" src="data:@item.ContentType;base64, @Convert.ToBase64String(item.Content)" />
+                <p>@item.Name <a href="#" class="btn btn-danger suppr" data-id="@item.Id"><i class="fa fa-remove"></i></a></p>
+
+            </div>
+        }
+</div>
+
+<form action="@Url.Action("AddFile", "BOVoyages")" method="post" enctype="multipart/form-data">
     @Html.HiddenFor(x => x.Id)
     <div class="form-group">
         <label>Fichier</label>
@@ -83,3 +94,21 @@
 <div>
     @Html.ActionLink("Retour à la liste des voyages", "Index")
 </div>
+
+<script>
+    $(document).ready(function () {
+            $("a.suppr").click(function () {
+                var idFile = $(this).data("id");
+                $.ajax({
+                    url: "@Url.Action("DeleteFile", "Rooms")",
+                    type: "POST",
+                    dataType: "json",
+                    data: { id: idFile },
+                    success: function (obj) {
+                        $("#div-file-" + idFile).remove();
+                        alert("Fichier supprimé.");
+                    }
+                });
+            });
+    });
+</script>
