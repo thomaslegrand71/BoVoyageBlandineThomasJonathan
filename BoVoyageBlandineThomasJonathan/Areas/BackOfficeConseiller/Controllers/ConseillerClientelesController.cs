@@ -7,10 +7,14 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BoVoyageBlandineThomasJonathan.Data;
+using BoVoyageBlandineThomasJonathan.Filters;
 using BoVoyageBlandineThomasJonathan.Models;
+using BoVoyageBlandineThomasJonathan.Utils.Validators;
 
 namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
 {
+    [AuthenticationFilter]
+
     public class ConseillerClientelesController : Controller
     {
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
@@ -53,8 +57,11 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
         {
             if (ModelState.IsValid)
             {
+                db.Configuration.ValidateOnSaveEnabled = false;
+                conseillerClientele.Password = conseillerClientele.Password.HashMD5(); 
                 db.ConseillersClientele.Add(conseillerClientele);
                 db.SaveChanges();
+                TempData["Message"] = $"Conseiller {conseillerClientele.Nom} enregistré";
                 return RedirectToAction("Index");
             }
 

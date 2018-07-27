@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = null;
+    var conseiller = Session["USER_BO"] as BoVoyageBlandineThomasJonathan.Models.ConseillerClientele;
 }
 
 <html lang="fr">
@@ -43,7 +44,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="~/">BoVoyage</a>
+        <a class="navbar-brand" href="@Url.Action("Index", "BOClients")">BoVoyage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,7 +52,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="~/"> <i class="fa fa-home"></i> Accueil BO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="@Url.Action("Index", "Dashboard")"> <i class="fa fa-home"></i> Accueil BO <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,7 +68,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-user"></i> Demandes 
+                        <i class="fa fa-user"></i> Demandes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="@Url.Action("Index", "BOVisiteurs")">Liste des demandes</a>
@@ -111,16 +112,20 @@
 
             </ul>
 
+            <span class="navbar-text">
+                Bonjour @conseiller.Prenom @conseiller.Nom <a href="@Url.Action("Logout", "Authentication")" class="btn btn-warning btn-sm"><i class="fa fa-eject"></i></a>
+            </span>
+            
 
-            <form class="nav-item dropdown my-2 my-lg-0">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-sign-in"></i> Se connecter
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Client</a>
-                    <a class="dropdown-item" href="#">Commercial</a>
-                </div>
-            </form>
+            @*<form class="nav-item dropdown my-2 my-lg-0">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-sign-in"></i> Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Client</a>
+                <a class="dropdown-item" href="#">Commercial</a>
+            </div>
+        </form>*@
         </div>
     </nav>
 

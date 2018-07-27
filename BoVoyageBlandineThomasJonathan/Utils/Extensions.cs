@@ -23,7 +23,7 @@ namespace BoVoyageBlandineThomasJonathan.Utils.Validators
                 foreach (byte b in hash)
                 {
                     if (b < 16)
-                        result += "0" + b.ToString("x");
+                        result += "0" + b.ToString();
                     else
                         result += b.ToString("x");
                 }

@@ -16,6 +16,7 @@
 }
  
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <br>
     <ol class="carousel-indicators">
         <li data-target="India.png" data-slide-to="0" class="active"></li>
         <li data-target="Ireland.png" data-slide-to="1"></li>
@@ -65,10 +66,10 @@
 
 
 <div class="container text-center">
-    <h3>Nos meilleures offres</h3><br>
+    <h3 style="color: mediumaquamarine"><b>Nos meilleures offres</b></h3><br>
     <div class="row">
         <div class="col-sm-4">
-            <h4>Les prochains voyages</h4>
+            <h4 style="font-style: italic; color: darkslategrey">Les prochains voyages</h4>
             <div class="row" text-center>
 
                 @foreach (var item in Model)
@@ -88,18 +89,15 @@
 
             </div>
 
-            
         </div>
         <div class="col-sm-4">
-            <h4>Les meilleurs budgets</h4>
-
-            
-           
+            <h4 style="font-style: italic; color: darkslategrey">Les meilleurs budgets</h4>  
 
             @Html.Action("TopFiveBudget", "Shared")
+
         </div>
         <div class="col-sm-4">
-            <h4>Les destinations populaires</h4>
+            <h4 style="font-style: italic; color: darkslategrey" >Les destinations populaires</h4>
 
             @Html.Action("TopFiveTrending", "Shared")
 

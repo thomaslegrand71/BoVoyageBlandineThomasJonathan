@@ -169,6 +169,9 @@
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Edit.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Index.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Search.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_UpcomingView.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\Shared\_MyReservations.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -197,6 +200,8 @@
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BOVisiteursController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BOVoyagesController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\ConseillerClientelesController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\BackOfficeConseiller\Controllers\BOSharedController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Models\AuthenticationViewModels.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
@@ -208,6 +213,7 @@
     <Compile Include="Controllers\VoyageFilesController.cs" />
     <Compile Include="Controllers\VoyagesController.cs" />
     <Compile Include="Data\BoVoyageBTJDbContext.cs" />
+    <Compile Include="Filters\AuthenticationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

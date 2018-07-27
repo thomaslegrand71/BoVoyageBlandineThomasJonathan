@@ -12,6 +12,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
         public ActionResult Index()
         {
             return View();
+
         }
     }
 }
