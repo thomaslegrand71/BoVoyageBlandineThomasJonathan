@@ -5,25 +5,20 @@
 }
 
 <h2 style="text-align: center">Destinations</h2>
-
-@using (Html.BeginForm("Search", "BODestinations", FormMethod.Post))
-
-{
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Pays de destination" aria-label="Rechercher par pays" aria-describedby="basic-addon2">
-    <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">Chercher</button>
-    </div>
-</div>
-}
-
-
-<p>
+<hr />
+<a class="btn btn-basic" role="button">
     @Html.ActionLink("Ajouter destination", "Create")
-</p>
+</a>
 
+@*Essai de creation de boutons pour accéder aux différents menu - à retravailler si possible*@
+@*<a  href="@Url.RouteUrl("Create", "BODestinatiion")" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Ajouter destination</a>*@
 
+<a href="button" class="btn btn-basic">
+    @Html.ActionLink("Rechercher destination", "Search")
+</a>
 
+<br />
+<br />
 
 <table class="table">
     <tr>

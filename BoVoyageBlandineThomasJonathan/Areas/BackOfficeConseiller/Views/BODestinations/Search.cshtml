@@ -7,16 +7,73 @@
 
 <h2>Chercher une destination</h2>
 
-@using (Html.BeginForm("SearchAct", "BODestinations", FormMethod.Post))
+@using (Html.BeginForm("Search", "BODestinations", FormMethod.Post))
+
 {
-    <form>
-        <div>
-            Pays:
-            <br>
-            <input type="text" id="PaysdeDestination">
-
-            <input type="button" id="submitId" value="submit" />
-
+    <form class="form-group">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Pays de destination" aria-label="Rechercher par pays" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Chercher" class="btn btn-default" />
+                </div>
+            </div>
         </div>
     </form>
+
 }
+
+@{
+    if (ViewBag.Destinations != null)
+    {
+        <span>
+            Destination: @ViewBag.Destinations
+        </span>
+    }
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Continent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Continent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Supprimer", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Retour à la liste complète", "Index")
+</div>

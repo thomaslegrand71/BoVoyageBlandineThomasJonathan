@@ -115,14 +115,25 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        //GET: BackOfficeConseiller/BODestinations/Search
+        public ActionResult Search()
+        {
+            return View();
+        }
 
-        //POST: BackOfficeConseiller/BODestinations/Search/
+        //POST: BackOfficeConseiller/BODestinations/Search
         [HttpPost, ActionName("Search")]
         [ValidateAntiForgeryToken]
         public ActionResult Search(string pays)
+                    //public IEnumerable<Destination> Search(string pays)
 
-        {
-            Destination destination = db.Destinations.Find(pays);
+        {                         
+            if (!String.IsNullOrWhiteSpace(pays))
+            {
+                var destination = db.Destinations.Where(x => x.Pays.Contains(pays));
+            }
+
+            //pays = destination.ToList();
 
             return View();
         }
