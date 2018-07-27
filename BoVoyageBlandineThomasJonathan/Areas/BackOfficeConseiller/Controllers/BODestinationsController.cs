@@ -116,6 +116,17 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             return RedirectToAction("Index");
         }
 
+        //POST: BackOfficeConseiller/BODestinations/Search/
+        [HttpPost, ActionName("Search")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Search(string pays)
+
+        {
+            Destination destination = db.Destinations.Find(pays);
+
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
