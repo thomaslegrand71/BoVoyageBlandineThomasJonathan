@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Destination>
+
+@{
+    ViewBag.Title = "Rechercher";
+}
+
+<h2>Chercher une destination</h2>
+
+@using (Html.BeginForm("SearchAct", "BODestinations", FormMethod.Post))
+{
+    <form>
+        <div>
+            Pays:
+            <br>
+            <input type="text" id="PaysdeDestination">
+
+            <input type="button" id="submitId" value="submit" />
+
+        </div>
+    </form>
+}

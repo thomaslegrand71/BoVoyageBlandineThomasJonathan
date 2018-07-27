@@ -9,7 +9,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -70,6 +70,15 @@
         </div>
     </div>
 }
+
+<form action="@Url.Action("AddFile", "Voyages")" method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(x => x.Id)
+    <div class="form-group">
+        <label>Fichier</label>
+        <input type="file" name="upload" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-warning">Ajouter</button>
+</form>
 
 <div>
     @Html.ActionLink("Retour à la liste des voyages", "Index")

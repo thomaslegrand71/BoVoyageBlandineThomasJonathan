@@ -168,6 +168,7 @@
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Details.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Edit.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Index.cshtml" />
+    <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Search.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -220,6 +221,10 @@
     <Compile Include="Migrations\201807251408123_add.cs" />
     <Compile Include="Migrations\201807251408123_add.Designer.cs">
       <DependentUpon>201807251408123_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807270706402_updateVoyagefile.cs" />
+    <Compile Include="Migrations\201807270706402_updateVoyagefile.Designer.cs">
+      <DependentUpon>201807270706402_updateVoyagefile.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agence.cs" />
@@ -292,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807251408123_add.resx">
       <DependentUpon>201807251408123_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807270706402_updateVoyagefile.resx">
+      <DependentUpon>201807270706402_updateVoyagefile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
