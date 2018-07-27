@@ -76,7 +76,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Voyage voyage = db.Voyages.Find(id);
+            Voyage voyage = db.Voyages.Include(x => x.Files).SingleOrDefault(x => x.Id == id);
             if (voyage == null)
             {
                 return HttpNotFound();
@@ -150,13 +150,27 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
                 db.SaveChanges();
 
                 return RedirectToAction("Edit", new { id = model.VoyageID });
+
             }
 
             else
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+               return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
+        }
+
+        [HttpPost]
+        public ActionResult DeleteFile(int id)
+        {
+            var file = db.VoyageFiles.Find(id);
+            if (file == null)
+            {
+                return HttpNotFound("Le fichier demandé n'existe pas.");
+            }
+            db.VoyageFiles.Remove(file);
+            db.SaveChanges();
+            return Json("OK");
         }
 
         protected override void Dispose(bool disposing)

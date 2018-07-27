@@ -14,7 +14,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         // GET: Shared
         public ActionResult TopFiveBudget()
         {
-            var voyage = db.Voyages.Include("Destination").Where(x => x.DateAller > DateTime.Now).OrderBy(x => x.TarifToutCompris);
+            var voyage = db.Voyages.Include("Destination").Where(x => x.DateAller > DateTime.Now).OrderBy(x => x.TarifToutCompris).Take(5);
 
 
             return View("_TopFiveBudget", voyage);
@@ -28,14 +28,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
                                     .OrderByDescending(y => y.Count())
                                     .Take(5)
                                     .Select(z => z.Key).ToList();
-
-
-
-
-
-            //var trending = db.Voyages.Include("Destination").Where(x => x.DateAller > DateTime.Now).OrderBy(x => x.Destination.Pays).GroupBy(x => x.Destination.Pays);
-
-
+            
             return View("_TopFiveTrending", trending);
         }
     }

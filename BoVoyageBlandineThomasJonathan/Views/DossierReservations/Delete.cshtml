@@ -1,0 +1,96 @@
+﻿@model BoVoyageBlandineThomasJonathan.Models.DossierReservation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DossierReservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConseillerClientele.Mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConseillerClientele.Mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Participants.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Participants.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Voyage.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voyage.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroCarteBancaire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroCarteBancaire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrixTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrixTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreDeVoyageurs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreDeVoyageurs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SolvaviliteCompteBancaire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SolvaviliteCompteBancaire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssuranceAnnulation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssuranceAnnulation)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

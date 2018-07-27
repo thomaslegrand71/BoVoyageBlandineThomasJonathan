@@ -49,7 +49,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Mail,Password,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] ConseillerClientele conseillerClientele)
+        public ActionResult Create([Bind(Include = "Id,Mail,Password,ConfirmedPassword,Nom,Prenom,Adresse,Telephone,DateDeNaissance,Age,CivilityID")] ConseillerClientele conseillerClientele)
         {
             if (ModelState.IsValid)
             {
