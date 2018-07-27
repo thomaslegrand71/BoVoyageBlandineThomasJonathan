@@ -22,6 +22,5 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Models
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
-        }
-    
+        }   
 }

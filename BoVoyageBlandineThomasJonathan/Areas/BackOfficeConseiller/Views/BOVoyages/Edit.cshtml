@@ -73,11 +73,10 @@
 
 <div class="row">
         @foreach (var item in Model.Files)
-        {
+        {            
             <div class="col-md-3" id="div-file-@item.Id">
                 <img class="img-thumbnail" title="@item.Name" src="data:@item.ContentType;base64, @Convert.ToBase64String(item.Content)" />
-                <p>@item.Name <a href="#" class="btn btn-danger suppr" data-id="@item.Id"><i class="fa fa-remove"></i></a></p>
-
+                <p>@item.Name <a href="" class="btn btn-danger suppr" data-id="@item.Id"><i class="fa fa-remove"></i></a></p>
             </div>
         }
 </div>

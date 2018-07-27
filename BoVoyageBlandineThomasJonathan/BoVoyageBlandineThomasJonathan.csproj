@@ -213,6 +213,7 @@
     <Compile Include="Controllers\VoyageFilesController.cs" />
     <Compile Include="Controllers\VoyagesController.cs" />
     <Compile Include="Data\BoVoyageBTJDbContext.cs" />
+    <Compile Include="Filters\AuthenticationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
