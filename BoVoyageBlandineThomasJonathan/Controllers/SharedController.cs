@@ -14,7 +14,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         // GET: Shared
         public ActionResult TopFiveBudget()
         {
-            var voyage = db.Voyages.Include("Destination").Where(x => x.DateAller > DateTime.Now).OrderBy(x => x.TarifToutCompris);
+            var voyage = db.Voyages.Include("Destination").Where(x => x.DateAller > DateTime.Now).OrderBy(x => x.TarifToutCompris).Take(5);
 
 
             return View("_TopFiveBudget", voyage);
