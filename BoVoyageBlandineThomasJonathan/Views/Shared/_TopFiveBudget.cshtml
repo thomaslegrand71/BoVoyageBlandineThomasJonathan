@@ -1,46 +1,25 @@
 ﻿@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Voyage>
 
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Agence.Nom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Destination.Continent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateAller)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateRetour)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlacesDisponibles)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TarifToutCompris)
-        </th>
-        <th></th>
-    </tr>*@
+@{ Layout=null;}
+    
+    <div class="row" text-center>
 
-@foreach (var item in Model)
-{
-    <table>
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Destination.Pays)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateAller)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TarifToutCompris)
-        </td>
-    </tr>
+        @foreach (var item in Model)
+        {
 
+            <table class="table" text-align="center">
+                <tr>
+                    @Html.DisplayFor(modelItem => item.Destination.Pays)
+                </tr>
+                <tr>
+                    @Html.DisplayFor(modelItem => item.DateAller)
+                </tr>
+                <tr>
+                    @Html.DisplayFor(modelItem => item.TarifToutCompris)
+                </tr>
+            </table>
+        }
 
-</table>
-}
+    </div>
+
+    

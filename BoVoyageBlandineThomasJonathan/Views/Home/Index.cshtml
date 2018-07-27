@@ -93,14 +93,15 @@
         <div class="col-sm-4">
             <h4>Les meilleurs budgets</h4>
 
-            @Html.Partial("_TopFiveBudget")
+            @*@Html.Partial("_TopFiveBudget")*@
            
 
-            @*@Html.Action("TopFivePrice", "Shared")*@
+            @Html.Action("TopFiveBudget", "Shared")
         </div>
         <div class="col-sm-4">
             <h4>Les destinations populaires</h4>
-            @*@Html.Action("TopFiveCountry", "Shared")*@
+
+            @*@Html.Action("TopFiveTrending", "Shared")*@
         </div>
     </div>
 </div><br>
