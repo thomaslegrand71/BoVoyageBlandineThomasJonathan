@@ -1,7 +1,31 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Accueil";
 }
 
-<h2>Accueil Back Office</h2>
+<h2 style="text-align: center">Accueil BoBackOffice</h2> <br />
+
+
+<div class="container text-center">
+    <h3>Votre tableau de bord</h3>  <br />
+    <div class="row">
+        <div class="col-sm-6" style="border: 5px solid black">
+            <h4>Mes reservations</h4>
+            <div class="row" text-center>
+
+
+                @*@Html.Action("MesReservations", "BoShared")*@
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-6" style="border: 5px solid black">
+            <h4>Voyages à venir</h4>
+
+            @Html.Action("UpcomingView", "BOShared")
+
+        </div>
+    </div>
+</div>
+
 
