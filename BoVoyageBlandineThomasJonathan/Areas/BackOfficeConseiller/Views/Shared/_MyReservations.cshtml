@@ -1,0 +1,64 @@
+﻿
+
+@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.DossierReservation>
+
+@{ Layout = null;}
+
+
+<div class="row" text-center>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConseillerClientele)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrixTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Voyage.DateAller)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Voyage.DateRetour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Voyage.Destination.Pays)
+            </th>
+
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @Html.DisplayFor(modelItem => item.ConseillerClientele)
+            </tr>
+            <tr>
+                @Html.DisplayFor(modelItem => item.Client.Nom)
+            </tr>
+            <tr>
+                @Html.DisplayFor(modelItem => item.Client.Prenom)
+            </tr>
+            <tr>
+                @Html.DisplayFor(modelItem => item.PrixTotal)
+            </tr>
+            <tr>
+                @Html.DisplayFor(modelItem => item.Voyage.DateAller)
+            </tr>
+            <tr>
+                @Html.DisplayFor(modelItem => item.Voyage.DateRetour)
+            </tr>
+            <tr>
+                @Html.DisplayFor(modelItem => item.Voyage.Destination.Pays)
+            </tr>
+        }
+        </table>
+        
+
+</div>
