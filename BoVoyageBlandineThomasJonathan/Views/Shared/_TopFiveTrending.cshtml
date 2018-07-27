@@ -10,15 +10,15 @@
         {
         <table class="table" text-align="center">
 
-            <tr>
-                Pays : @item.Key
+            <tr class="row">
+                <div class="row" style="width:10cm">
+                    Pays : @item.Key  Tarif : @item.ToList()[0].TarifToutCompris €
+                </div>
+                <div class="row" style="width:10cm">
+                    Pays : @item.Key  Tarif : @item.ToList()[1].TarifToutCompris €
+                </div>
             </tr>
-            <tr>
-                Tarif : @item.ToList()[0].TarifToutCompris €
-            </tr>
-            @*<p>@item.ToList()[0].DateAller</p>
-        <p>@item.ToList()[0].TarifToutCompris</p>*@
-
+            
 
         </table>
 
