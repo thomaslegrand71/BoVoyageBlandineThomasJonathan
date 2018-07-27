@@ -41,6 +41,7 @@ namespace BoVoyageBlandineThomasJonathan.Models
 
         //public int IdAssurance { get; set; }
         //[ForeignKey("IdAssurance")]
+        [Display(Name = "Assurancde Annulation souscrite")]
         public bool AssuranceAnnulation { get; set; }
 
         public int IdParticipant { get; set; }

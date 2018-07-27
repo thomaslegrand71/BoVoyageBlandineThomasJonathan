@@ -6,9 +6,11 @@
 
 <h2>Liste des voyages</h2>
 
+
 <p>
     <button class="btn btn-success" style="background-color: khaki; border-color: khaki">@Html.ActionLink("Ajouter un nouveau voyage", "Create")</button>
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -32,32 +34,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Agence.Nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Destination.Pays)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateAller)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateRetour)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlacesDisponibles)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TarifToutCompris)
-        </td>
-        <td>
-            @Html.ActionLink("Modifier", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Supprimer", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agence.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination.Pays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRetour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacesDisponibles)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TarifToutCompris)
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Supprimer", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>

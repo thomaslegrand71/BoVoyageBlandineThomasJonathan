@@ -58,9 +58,9 @@
                         <i class="fa fa-globe"></i> Naviguer
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="@Url.Action("Index", "Voyages")">Afficher</a>
-                        <a class="dropdown-item" href="#">Rechercher</a>
-
+                        <a class="dropdown-item" href="@Url.Action("Index", "Voyages")">Afficher voyages</a>
+                        @*<a class="dropdown-item" href="#">Rechercher</a>*@
+                        <a class="dropdown-item" href="@Url.Action("Create","DossierReservations")">Créez réservation</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -71,9 +71,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("About","Home")"> <i class="fa fa-info"></i>  A propos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Create","DossierReservations")"> <i class="fa fa-folder-open"></i>  Créez votre réservation !</a>
                 </li>
             </ul>
 
