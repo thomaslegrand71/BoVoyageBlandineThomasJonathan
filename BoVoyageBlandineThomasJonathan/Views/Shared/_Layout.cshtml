@@ -81,7 +81,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Client</a>
-                        <a class="dropdown-item" href="@Url.Action("Login","AuthenticationController")">Conseiller</a>
+                        <a class="dropdown-item" href="@Url.Action("Login","Authentication", new { area = "BackOfficeConseiller" })">Conseiller</a>
                     </div>
                 </form>
         </div>
