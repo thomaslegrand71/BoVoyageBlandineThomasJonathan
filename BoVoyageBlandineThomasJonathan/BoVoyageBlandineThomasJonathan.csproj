@@ -200,6 +200,7 @@
     <Compile Include="Areas\BackOfficeConseiller\Models\AuthenticationViewModels.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
+    <Compile Include="Controllers\DossierReservationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ParticipantsController.cs" />
     <Compile Include="Controllers\SharedController.cs" />
@@ -225,6 +226,14 @@
     <Compile Include="Migrations\201807270706402_updateVoyagefile.cs" />
     <Compile Include="Migrations\201807270706402_updateVoyagefile.Designer.cs">
       <DependentUpon>201807270706402_updateVoyagefile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807270905084_supprTableAssurance.cs" />
+    <Compile Include="Migrations\201807270905084_supprTableAssurance.Designer.cs">
+      <DependentUpon>201807270905084_supprTableAssurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807270907401_supprTableAssurance1.cs" />
+    <Compile Include="Migrations\201807270907401_supprTableAssurance1.Designer.cs">
+      <DependentUpon>201807270907401_supprTableAssurance1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agence.cs" />
@@ -277,6 +286,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Shared\_TopFiveBudget.cshtml" />
     <Content Include="Views\Shared\_TopFiveTrending.cshtml" />
+    <Content Include="Views\DossierReservations\Create.cshtml" />
+    <Content Include="Views\DossierReservations\Delete.cshtml" />
+    <Content Include="Views\DossierReservations\Details.cshtml" />
+    <Content Include="Views\DossierReservations\Edit.cshtml" />
+    <Content Include="Views\DossierReservations\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -300,6 +314,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807270706402_updateVoyagefile.resx">
       <DependentUpon>201807270706402_updateVoyagefile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807270905084_supprTableAssurance.resx">
+      <DependentUpon>201807270905084_supprTableAssurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807270907401_supprTableAssurance1.resx">
+      <DependentUpon>201807270907401_supprTableAssurance1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

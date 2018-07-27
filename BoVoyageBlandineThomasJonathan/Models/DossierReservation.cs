@@ -39,9 +39,9 @@ namespace BoVoyageBlandineThomasJonathan.Models
         [ForeignKey("IdConseillerClientele")]
         public ConseillerClientele ConseillerClientele { get; set; }
 
-        public int IdAssurance { get; set; }
-        [ForeignKey("IdAssurance")]
-        public Assurance Assurance { get; set; }
+        //public int IdAssurance { get; set; }
+        //[ForeignKey("IdAssurance")]
+        public bool AssuranceAnnulation { get; set; }
 
         public int IdParticipant { get; set; }
         [ForeignKey("IdParticipant")]
