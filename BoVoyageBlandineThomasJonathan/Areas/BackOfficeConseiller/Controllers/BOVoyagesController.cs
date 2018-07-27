@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -127,6 +128,35 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             db.Voyages.Remove(voyage);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult AddFile(int id, HttpPostedFileBase upload)
+        {
+            if (upload.ContentLength > 0)
+            {
+                var model = new VoyageFile();
+
+                model.VoyageID = id;
+                model.Name = upload.FileName;
+                model.ContentType = upload.ContentType;
+
+                using (var reader = new BinaryReader(upload.InputStream))
+                {
+                    model.Content = reader.ReadBytes(upload.ContentLength);
+                }
+
+                db.VoyageFiles.Add(model);
+                db.SaveChanges();
+
+                return RedirectToAction("Edit", new { id = model.VoyageID });
+            }
+
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
         }
 
         protected override void Dispose(bool disposing)
