@@ -1,23 +1,29 @@
-﻿@model IEnumerable<BoVoyageBlandineThomasJonathan.Models.Voyage>
+﻿@model IEnumerable<IGrouping<string, BoVoyageBlandineThomasJonathan.Models.Voyage>>
 
-@{ Layout = null;}
 
-<div class="row" text-center>
-
-    @foreach (var item in Model)
-    {
-
+@{
+    Layout = null;
+}
+<div class="row">
+    <div class="col-md-3">
+        @foreach (var item in Model)
+        {
         <table class="table" text-align="center">
-            <tr>
-                @Html.DisplayFor(modelItem => item.Destination.Pays)
-            </tr>
-            <tr>
-                @Html.DisplayFor(modelItem => item.DateAller)
-            </tr>
-            <tr>
-                @Html.DisplayFor(modelItem => item.TarifToutCompris)
-            </tr>
-        </table>
-    }
 
+            <tr>
+                Pays : @item.Key
+            </tr>
+            <tr>
+                Tarif : @item.ToList()[0].TarifToutCompris €
+            </tr>
+            @*<p>@item.ToList()[0].DateAller</p>
+        <p>@item.ToList()[0].TarifToutCompris</p>*@
+
+
+        </table>
+
+
+
+        }
+    </div>
 </div>
