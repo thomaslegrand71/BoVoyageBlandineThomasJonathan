@@ -26,8 +26,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             var trending = db.Voyages.Include("Destination")
                                     .GroupBy(x => x.Destination.Pays)
                                     .OrderByDescending(y => y.Count())
-                                    .Take(5)
-                                    .Select(z => z.Key).ToList();
+                                    .Take(5).ToList();
             
             return View("_TopFiveTrending", trending);
         }
