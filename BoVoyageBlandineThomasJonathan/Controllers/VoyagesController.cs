@@ -17,7 +17,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
         // GET: Voyages
-        public ViewResult Index(string RechercheParPays, string RechercheParAgence, DateTime? RechercheParDate)
+        public ViewResult Index(string RechercheParPays, string RechercheParAgence, DateTime? RechercheParDate, int? RechercheParPrixMin, int? RechercheParPrixMax, DateTime? RechercheParDateMax)
         {
 
             var resultat = from x in db.Voyages.Include(X => X.Agence).Include("Destination")
@@ -42,6 +42,20 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
                 resultat = resultat.Where(x => x.DateAller > RechercheParDate);
             }
 
+            if (RechercheParDateMax != null)
+            {
+                resultat = resultat.Where(x => x.DateAller < RechercheParDateMax);
+            }
+
+            if (RechercheParPrixMin !=null)
+            {
+                resultat = resultat.Where(x => x.TarifToutCompris > RechercheParPrixMin);
+            }
+
+            if (RechercheParPrixMax != null)
+            {
+                resultat = resultat.Where(x => x.TarifToutCompris < RechercheParPrixMax);
+            }
 
             ModelState.Clear();
 

@@ -5,10 +5,10 @@
 }
 
 <h2>Voyages disponibles</h2>
- @*Pas nécessaire sur la partie web*@
+@*Pas nécessaire sur la partie web*@
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 <table class="table">
     <tr>
         <th>
@@ -53,14 +53,28 @@
 
                         </p>
                         //Faire apparaitre comme datepicker
-                        @*<p>
-                               Chercher par Date: @Html.TextBox("RechercheParDate", "Renseigner au format DD-MM-YYYY", new { @class = "form-control datepicker" })
+                        <p style="width:40cm">
+                            Je souhaite partir entre le : @Html.TextBox("RechercheParDate", "Renseigner au format DD-MM-YYYY", new { @class = "form-control datepicker" }) et le : @Html.TextBox("RechercheParDateMax", "Renseigner au format DD-MM-YYYY", new { @class = "form-control datepicker" })
                             @*<input type="date" id="RechercheParDate" />*@
-                        @*</p>*@
-                        <p>
-                            Chercher par Agence: @Html.TextBox("RechercheParAgence")
-                            <input type="submit" />
                         </p>
+                        <p>
+                            Saisir une agence: @Html.TextBox("RechercheParAgence")
+
+                        </p>
+                        <p>
+                            Saisir un prix minimum: @Html.TextBox("RechercheParPrixMin")
+
+                        </p>
+
+                        <p>
+                            Saisir un prix maximum: @Html.TextBox("RechercheParPrixMax")
+
+                        </p>
+
+                        @*<input type="number" value="textboxintdata" id="RechercheParPrixMin" />
+            <input type="number" value="textboxintdata" id="RechercheParPrixMax" />*@
+                        <input type="submit" />
+
 
 
                     }
