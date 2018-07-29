@@ -17,11 +17,42 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
         // GET: Voyages
-        public ActionResult Index()
+        public ViewResult Index(string RechercheParPays, string RechercheParAgence, DateTime? RechercheParDate)
         {
-            var voyages = db.Voyages.Include(v => v.Agence).Include(v => v.Destination);
-            return View(voyages.ToList());
+
+            var resultat = from x in db.Voyages.Include(X => X.Agence).Include("Destination")
+                           select x;
+
+            if (!String.IsNullOrEmpty(RechercheParPays) && !String.IsNullOrEmpty(RechercheParAgence))
+            {
+                resultat = db.Voyages.Include(X => X.Agence).Include("Destination").Where(s => s.Destination.Pays.Contains(RechercheParPays)).Where(s => s.Agence.Nom.Contains(RechercheParAgence));
+            }
+
+            else if (!String.IsNullOrEmpty(RechercheParPays))
+            {
+                resultat = db.Voyages.Include(X => X.Agence).Include("Destination").Where(s => s.Destination.Pays.Contains(RechercheParPays));
+            }
+            else if (!String.IsNullOrEmpty(RechercheParAgence))
+            {
+                resultat = db.Voyages.Include(X => X.Agence).Include("Destination").Where(s => s.Agence.Nom.Contains(RechercheParAgence));
+            }
+
+            if (RechercheParDate != null)
+            {
+                resultat = resultat.Where(x => x.DateAller > RechercheParDate);
+            }
+
+
+            ModelState.Clear();
+
+
+
+            return View(resultat);
         }
+
+
+
+
 
         // GET: Voyages/Details/5
         public ActionResult Details(int? id)
