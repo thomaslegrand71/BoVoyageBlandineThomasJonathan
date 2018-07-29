@@ -19,12 +19,38 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
         // GET: BackOfficeConseiller/BOClients
-        public ActionResult Index()
+        public ViewResult Index(string RechercheParNom, string RechercheParVille, DateTime? RechercheParDate)
         {
-            var clients = db.Clients.Include(c => c.Civilite);
-            return View(clients.ToList());
-        }
 
+            var resultat = from x in db.Clients.Include("Civilite")
+                           select x;
+
+            if (!String.IsNullOrEmpty(RechercheParNom) && !String.IsNullOrEmpty(RechercheParVille))
+            {
+                resultat = db.Clients.Include("Civilite").Where(s => s.Nom.Contains(RechercheParNom)).Where(s => s.Adresse.Contains(RechercheParVille));
+            }
+
+            else if (!String.IsNullOrEmpty(RechercheParNom))
+            {
+                resultat = db.Clients.Include("Civilite").Where(s => s.Nom.Contains(RechercheParNom));
+            }
+            else if (!String.IsNullOrEmpty(RechercheParVille))
+            {
+                resultat = db.Clients.Include("Civilite").Where(s => s.Nom.Contains(RechercheParVille));
+            }
+
+            if (RechercheParDate != null)
+            {
+                resultat = resultat.Where(x => x.DateDeNaissance > RechercheParDate);
+            }
+
+
+            ModelState.Clear();
+
+
+
+            return View(resultat);
+        }
         // GET: BackOfficeConseiller/BOClients/Details/5
         public ActionResult Details(int? id)
         {
