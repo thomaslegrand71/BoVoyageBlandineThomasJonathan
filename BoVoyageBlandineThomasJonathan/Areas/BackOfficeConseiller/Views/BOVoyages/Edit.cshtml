@@ -87,12 +87,11 @@
         <label>Fichier</label>
         <input type="file" name="upload" class="form-control" />
     </div>
+    <a href="@Url.Action("Index")" class="btn btn-info"><i class="fa fa-chevron-left"></i> Retour à la liste</a>
     <button type="submit" class="btn btn-warning">Modifier </button>
 </form>
 
-<div>
-    @Html.ActionLink("Retour à la liste des voyages", "Index")
-</div>
+
 
 <script>
     $(document).ready(function () {
