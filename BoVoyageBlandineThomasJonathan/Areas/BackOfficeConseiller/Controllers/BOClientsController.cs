@@ -58,7 +58,9 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Clients.Find(id);
+            Client client = db.Clients.Include(X => X.Civilite).Where(x => x.Id == id).SingleOrDefault();
+                
+                
             if (client == null)
             {
                 return HttpNotFound();

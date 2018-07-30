@@ -14,13 +14,13 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
     {
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
-        // GET: Authentication/Login
+        // GET: AuthenticationClients/Login
         public ActionResult Login()
         {
             return View();
         }
 
-        // POST: Authentication/Login
+        // POST: AuthenticationClients/Login
         [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Login(AuthenticationLoginViewModelClients model)
@@ -60,7 +60,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             //}
         }
 
-        // GET: Authentication/Logout
+        // GET: AuthenticationClients/Logout
         public ActionResult Logout()
         {
             Session.Clear();

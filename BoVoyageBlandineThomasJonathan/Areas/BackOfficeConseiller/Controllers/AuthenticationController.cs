@@ -42,7 +42,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
                 else
                 {
                     Session.Add("USER_BO", user);
-                    return RedirectToAction("Index", "BOVoyages", new { area = "BackOfficeConseiller" });
+                    return RedirectToAction("Index", "Dashboard", new { area = "BackOfficeConseiller" });
                 }
             }
 
