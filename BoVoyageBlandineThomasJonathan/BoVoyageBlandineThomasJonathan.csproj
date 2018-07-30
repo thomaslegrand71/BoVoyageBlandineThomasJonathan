@@ -202,6 +202,7 @@
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BOSharedController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Models\AuthenticationViewModels.cs" />
     <Compile Include="Controllers\AuthenticationClientsController.cs" />
+    <Compile Include="Controllers\ClientsAuthentifieController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\DossierReservationsController.cs" />
@@ -304,6 +305,7 @@
     <Content Include="Views\DossierReservations\Index.cshtml" />
     <Content Include="Views\Home\Maintenance.cshtml" />
     <Content Include="Views\AuthenticationClients\LoginClients.cshtml" />
+    <Content Include="Views\AuthenticationClients\HistoriqueReservation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -314,6 +316,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\ClientsAuthentifie\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807251054478_Init.resx">
