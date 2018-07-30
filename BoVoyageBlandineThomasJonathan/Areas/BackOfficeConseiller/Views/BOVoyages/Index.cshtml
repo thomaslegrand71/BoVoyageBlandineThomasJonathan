@@ -37,7 +37,7 @@
         <div class="card">
             <div class="card-header" id="headingOne" style="background-color: white">
                 <h5 class="mb-0">
-                    <button class="btn btn-btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-filter" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Filtrer les résultats
                     </button>
                 </h5>
@@ -53,14 +53,17 @@
                         </p>
                         //Faire apparaitre comme datepicker
                         @*<p>
-                       Chercher par Date: @Html.TextBox("RechercheParDate", "Renseigner au format DD-MM-YYYY", new { @class = "form-control datepicker" })
-                    @*<input type="date" id="RechercheParDate" />*@
+               Chercher par Date: @Html.TextBox("RechercheParDate", "Renseigner au format DD-MM-YYYY", new { @class = "form-control datepicker" })
+            @*<input type="date" id="RechercheParDate" />*@
                         @*</p>*@
                         <p>
                             Chercher par Agence: @Html.TextBox("RechercheParAgence")
                             <input type="submit" value="Rechercher" />
                         </p>
 
+                        <p>
+                            <a href="@Url.Action("Index")" class="btn btn-group"><i class="fa fa-chevron-left"> </i>  Retour à la liste</a>
+                        </p>
 
                     }
                 </div>
