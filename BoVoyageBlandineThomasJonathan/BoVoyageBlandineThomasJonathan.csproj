@@ -298,6 +298,7 @@
     <Content Include="Views\DossierReservations\Edit.cshtml" />
     <Content Include="Views\DossierReservations\Index.cshtml" />
     <Content Include="Views\Home\Maintenance.cshtml" />
+    <Content Include="Views\ClientAuthentifie\HistoriqueReservation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
