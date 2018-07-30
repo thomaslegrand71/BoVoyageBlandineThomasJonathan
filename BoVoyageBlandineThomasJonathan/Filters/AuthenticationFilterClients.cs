@@ -12,7 +12,7 @@ namespace BoVoyageBlandineThomasJonathan.Filters
         {
             if (filterContext.HttpContext.Session["USER"] == null)
             {
-                filterContext.Result = new RedirectResult("\\Authentication\\Login");
+                filterContext.Result = new RedirectResult("\\AuthenticationClients\\LoginClients");
             }
         }
     }
