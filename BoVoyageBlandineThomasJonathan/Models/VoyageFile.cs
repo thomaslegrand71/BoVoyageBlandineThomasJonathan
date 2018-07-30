@@ -25,6 +25,7 @@ namespace BoVoyageBlandineThomasJonathan.Models
 
         [Display(Name = "Voyage")]
         public int VoyageID { get; set; }
+
         [ForeignKey("VoyageID")]
         public Voyage Voyage { get; set; }
     }

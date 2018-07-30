@@ -39,8 +39,9 @@ namespace BoVoyageBlandineThomasJonathan.Models
         public int IdDestination { get; set; }
         [Display(Name = "Destination")]
         [ForeignKey("IdDestination")]
-        public Destination Destination { get; set; }      
+        public Destination Destination { get; set; }
 
+        [Display(Name = "Photos")]
         public ICollection<VoyageFile> Files { get; set; }
     }
 }
