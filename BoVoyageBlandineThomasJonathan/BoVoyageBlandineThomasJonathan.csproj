@@ -213,6 +213,7 @@
     <Compile Include="Controllers\VoyagesController.cs" />
     <Compile Include="Data\BoVoyageBTJDbContext.cs" />
     <Compile Include="Filters\AuthenticationFilter.cs" />
+    <Compile Include="Filters\AuthenticationFilterClients.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,6 +240,10 @@
     <Compile Include="Migrations\201807270907401_supprTableAssurance1.cs" />
     <Compile Include="Migrations\201807270907401_supprTableAssurance1.Designer.cs">
       <DependentUpon>201807270907401_supprTableAssurance1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807301627464_AddAuthenticationViewModelClients.cs" />
+    <Compile Include="Migrations\201807301627464_AddAuthenticationViewModelClients.Designer.cs">
+      <DependentUpon>201807301627464_AddAuthenticationViewModelClients.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agence.cs" />
@@ -328,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807270907401_supprTableAssurance1.resx">
       <DependentUpon>201807270907401_supprTableAssurance1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807301627464_AddAuthenticationViewModelClients.resx">
+      <DependentUpon>201807301627464_AddAuthenticationViewModelClients.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

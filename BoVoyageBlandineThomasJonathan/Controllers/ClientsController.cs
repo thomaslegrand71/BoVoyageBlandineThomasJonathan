@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using BoVoyageBlandineThomasJonathan.Data;
 using BoVoyageBlandineThomasJonathan.Models;
+using BoVoyageBlandineThomasJonathan.Utils.Validators;
 
 namespace BoVoyageBlandineThomasJonathan.Controllers
 {
@@ -53,6 +54,8 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         {
             if (ModelState.IsValid)
             {
+                db.Configuration.ValidateOnSaveEnabled = false;
+                client.Password = client.Password.HashMD5();
                 db.Clients.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home"); ;
