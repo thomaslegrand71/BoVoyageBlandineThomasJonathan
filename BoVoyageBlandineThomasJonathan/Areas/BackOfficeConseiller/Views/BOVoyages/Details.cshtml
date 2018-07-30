@@ -57,6 +57,14 @@
             @Html.DisplayFor(model => model.TarifToutCompris)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Files)
+        </dt>
+
+        <dd img class="d-block w-40" src='@Url.Action("show", "image", new { id = Model.Files }) '>
+
+        </dd>
+
     </dl>
 </div>
 
