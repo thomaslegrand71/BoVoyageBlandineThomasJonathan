@@ -58,7 +58,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             {
                 db.DossierReservation.Add(dossierReservation);
                 db.SaveChanges();
-                return RedirectToAction("");
+                return RedirectToAction("Index", "Home");
             }
 
             ViewBag.IdClient = new SelectList(db.Clients, "Id", "Mail", dossierReservation.IdClient);

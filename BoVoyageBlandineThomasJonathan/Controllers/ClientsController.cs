@@ -55,7 +55,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             {
                 db.Clients.Add(client);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home"); ;
             }
 
             ViewBag.CivilityID = new SelectList(db.Civilites, "Id", "Label", client.CivilityID);

@@ -53,7 +53,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             {
                 db.Visiteurs.Add(visiteur);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home"); ;
             }
 
             return View(visiteur);
