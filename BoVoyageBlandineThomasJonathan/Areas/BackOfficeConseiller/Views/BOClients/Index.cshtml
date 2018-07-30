@@ -6,9 +6,13 @@
 
 <h2>Liste des clients</h2>
 
+
+
 <p>
-    @Html.ActionLink("Créer un nouveau client", "Create")
+    <a href="@Url.Action("Create")" class="btn btn-info"><i class="fa fa-plus-circle"></i> Ajouter un client</a>
 </p>
+
+
 <table class="table">
     <tr>
         <th>

@@ -159,8 +159,6 @@
     <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Details.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Edit.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Index.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\BOClients\Search.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Search.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Search.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBO.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Create.cshtml" />
@@ -203,6 +201,7 @@
     <Compile Include="Areas\BackOfficeConseiller\Controllers\DashboardController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Controllers\BOSharedController.cs" />
     <Compile Include="Areas\BackOfficeConseiller\Models\AuthenticationViewModels.cs" />
+    <Compile Include="Controllers\AuthenticationClientsController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\DossierReservationsController.cs" />
@@ -244,6 +243,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Agence.cs" />
     <Compile Include="Models\Assurance.cs" />
+    <Compile Include="Models\AuthenticationViewModelClients.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Civilite.cs" />
     <Compile Include="Models\Client.cs" />
@@ -298,7 +298,7 @@
     <Content Include="Views\DossierReservations\Edit.cshtml" />
     <Content Include="Views\DossierReservations\Index.cshtml" />
     <Content Include="Views\Home\Maintenance.cshtml" />
-    <Content Include="Views\ClientAuthentifie\HistoriqueReservation.cshtml" />
+    <Content Include="Views\AuthenticationClients\LoginClients.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

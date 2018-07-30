@@ -75,7 +75,10 @@
 
     </dl>
 </div>
+
+
 <p>
-    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Retour à la liste", "Index")
+    <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-info"><i class="fa fa-chevron-left"></i>Modifier </a>
+    <a href="@Url.Action("Index")" class="btn btn-info"><i class="fa fa-chevron-left"></i> Retour à la liste</a>
 </p>
+
