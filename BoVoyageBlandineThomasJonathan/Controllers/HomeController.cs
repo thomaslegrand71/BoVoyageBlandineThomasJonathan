@@ -16,10 +16,13 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            //var quinze = intParse(DateTime).Now + 15;
-            var model = db.Voyages.Include("Destination").Where(x => x.DateAller > DateTime.Now).OrderBy(x => x.DateAller).Take(5);
+
+           
+
             
-            return View(model);
+
+
+            return View();
         }
 
         public ActionResult Contact()
