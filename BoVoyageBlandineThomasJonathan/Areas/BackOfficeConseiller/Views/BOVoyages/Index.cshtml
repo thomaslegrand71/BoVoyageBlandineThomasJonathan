@@ -8,7 +8,7 @@
 
 
 <p>
-    <button class="btn btn-success" style="background-color: khaki; border-color: khaki" <a href="@Html.ActionLink("Ajouter un nouveau voyage", "Create")"></button>
+    <a href="@Url.Action("Create")" class="btn btn-info"><i class="fa fa-plus-circle"></i> Ajouter un voyage</a>
 </p>
 
 <table class="table">
@@ -37,7 +37,7 @@
         <div class="card">
             <div class="card-header" id="headingOne" style="background-color: white">
                 <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Filtrer les résultats
                     </button>
                 </h5>
@@ -53,19 +53,19 @@
                         </p>
                         //Faire apparaitre comme datepicker
                         @*<p>
-                               Chercher par Date: @Html.TextBox("RechercheParDate", "Renseigner au format DD-MM-YYYY", new { @class = "form-control datepicker" })
-                            @*<input type="date" id="RechercheParDate" />*@
+                       Chercher par Date: @Html.TextBox("RechercheParDate", "Renseigner au format DD-MM-YYYY", new { @class = "form-control datepicker" })
+                    @*<input type="date" id="RechercheParDate" />*@
                         @*</p>*@
                         <p>
                             Chercher par Agence: @Html.TextBox("RechercheParAgence")
-                            <input type="submit" />
+                            <input type="submit" value="Rechercher" />
                         </p>
 
 
                     }
                 </div>
             </div>
-        </div>
+           </div>
         @foreach (var item in Model)
         {
             <tr>
@@ -96,3 +96,4 @@
         }
 
 </table>
+

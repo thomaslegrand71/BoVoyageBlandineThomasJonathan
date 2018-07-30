@@ -6,16 +6,15 @@
 
 <h2 style="text-align: center">Destinations</h2>
 <hr />
-<a class="btn btn-basic" role="button">
-    @Html.ActionLink("Ajouter destination", "Create")
-</a>
 
-@*Essai de creation de boutons pour accéder aux différents menu - à retravailler si possible*@
-@*<a  href="@Url.RouteUrl("Create", "BODestinatiion")" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Ajouter destination</a>*@
 
-<a href="button" class="btn btn-basic">
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-info"><i class="fa fa-plus-circle"></i> Ajouter destination</a>
+</p>
+
+@*<a href="button" class="btn btn-basic">
     @Html.ActionLink("Rechercher destination", "Search")
-</a>
+</a>*@
 
 <br />
 <br />

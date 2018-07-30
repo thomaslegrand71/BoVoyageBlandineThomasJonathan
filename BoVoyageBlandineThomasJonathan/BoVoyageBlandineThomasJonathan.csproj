@@ -159,8 +159,6 @@
     <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Details.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Edit.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Index.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\BOClients\Search.cshtml" />
-    <Content Include="Areas\BackOfficeConseiller\Views\BOVoyages\Search.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\ConseillerClienteles\Search.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\Shared\_LayoutBO.cshtml" />
     <Content Include="Areas\BackOfficeConseiller\Views\BODestinations\Create.cshtml" />
