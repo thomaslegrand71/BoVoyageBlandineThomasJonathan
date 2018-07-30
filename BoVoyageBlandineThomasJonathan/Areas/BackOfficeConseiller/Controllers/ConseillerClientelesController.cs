@@ -33,12 +33,13 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ConseillerClientele conseillerClientele = db.ConseillersClientele.Find(id);
-            if (conseillerClientele == null)
+            ConseillerClientele cc = db.ConseillersClientele.Include(X => X.Civilite).Where(x => x.Id == id).SingleOrDefault();
+            
+            if (cc == null)
             {
                 return HttpNotFound();
             }
-            return View(conseillerClientele);
+            return View(cc);
         }
 
         // GET: BackOfficeConseiller/ConseillerClienteles/Create

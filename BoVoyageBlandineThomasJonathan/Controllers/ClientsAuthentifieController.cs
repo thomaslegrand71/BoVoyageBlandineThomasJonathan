@@ -15,15 +15,15 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
     {
         private BoVoyageBTJDbContext db = new BoVoyageBTJDbContext();
 
-        //// GET: ClientsAuthentifie
-        //public ActionResult Index()
-        //{
-        //    var clients = db.Clients.Include(c => c.Civilite);
-        //    return View(clients.ToList());
-        //}
+        // GET: ClientsAuthentifie
+        public ActionResult Index()
+        {
+            var clients = db.Clients.Include(c => c.Civilite);
+            return View(clients.ToList());
+        }
 
         // GET: ClientsAuthentifie/Details/5
-        
+
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -124,6 +124,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
 
         public ActionResult HistoriqueReservation(int? id)
         {
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -136,9 +137,7 @@ namespace BoVoyageBlandineThomasJonathan.Controllers
             }
             return View(dr);
         }
-
-
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
