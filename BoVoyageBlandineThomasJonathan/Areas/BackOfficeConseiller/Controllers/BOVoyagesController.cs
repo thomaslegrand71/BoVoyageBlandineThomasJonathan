@@ -62,9 +62,11 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            //var model = db.Voyages.Include("Destination").Where(x => x.IdDestination).SingleOrDefault();
             
-            Voyage voyage = db.Voyages.Find(id);
+
+            Voyage voyage = db.Voyages.Include(X=>X.Destination).Include(x=>x.Agence).Where(x => x.Id == id).SingleOrDefault();
+            
+            //Voyage voyage = db.Voyages.Find(id);
 
             if (voyage == null)
             {

@@ -14,5 +14,7 @@ namespace BoVoyageBlandineThomasJonathan.Areas.BackOfficeConseiller.Controllers
             return View();
 
         }
+
+
     }
 }
